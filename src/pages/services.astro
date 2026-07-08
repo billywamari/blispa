@@ -1,0 +1,180 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import fade02 from "../assets/gallery/fade-02.jpg";
+import pedicure01 from "../assets/gallery/pedicure-01.jpg";
+import shave01 from "../assets/gallery/shave-01.jpg";
+import locs02 from "../assets/gallery/locs-02.jpg";
+import fade03 from "../assets/gallery/fade-03.jpg";
+import beard01 from "../assets/gallery/beard-01.jpg";
+import cut01 from "../assets/gallery/cut-01.jpg";
+
+const menu = [
+  {
+    category: "Cuts & Styling",
+    img: fade02,
+    intro: "The heart of the shop. Whatever's happening on your head — growing out, growing in, or overdue for a total reset — this is where it gets sorted. We cut in stages and check the line from three angles before we call it done.",
+    items: [
+      { name: "Classic Haircut", note: "Skin fade, taper or scissor cut — your call on how sharp the fade sits and how much length stays on top." },
+      { name: "Kids Haircut", note: "Patient, quick, and painless for anyone under 12 — including the ones who don't sit still." },
+      { name: "Braids & Cornrows", note: "Laid tight and even, style and duration depend on the pattern you bring in." },
+      { name: "Locs Styling & Retwist", note: "Fresh installs or maintenance retwists — we treat locs as a long-term relationship, not a one-off job." },
+      { name: "Hair Coloring", note: "Full color changes or subtle tips, matched carefully so it grows out looking intentional." },
+      { name: "Wash & Blow Dry", note: "A proper wash and dry-out, usually paired with any cut or color service." },
+    ],
+  },
+  {
+    category: "Shaves & Beard",
+    img: shave01,
+    intro: "Traditional straight-razor work, the way it's supposed to be done — hot towel first, sharp blade second, no shortcuts. This is the service that turns a good haircut into a finished look.",
+    items: [
+      { name: "Hot Towel Shave", note: "The full ritual — steam, lather, and a straight razor for a finish no cartridge blade can match." },
+      { name: "Beard Trim & Lineup", note: "Cleaned edges and a sculpted shape that actually suits your face, not just a straight line across." },
+      { name: "Beard Coloring", note: "Grey blending or a full color refresh, done gradually so it never looks painted on." },
+      { name: "Head Shave", note: "Straight-razor finish for a clean, even shine — no nicks, no rush." },
+    ],
+  },
+  {
+    category: "Spa & Self-Care",
+    img: pedicure01,
+    intro: "The part most barbershops skip entirely. Real pedicure chairs, real facials, real massage — because looking sharp and feeling good were never supposed to be two separate appointments.",
+    items: [
+      { name: "Manicure", note: "Classic or gel finish, with proper cuticle care either way." },
+      { name: "Pedicure", note: "Warm soak, callus treatment, and a finish that actually holds — a favorite for first-timers." },
+      { name: "Facial", note: "A real deep cleanse, not a five-minute wipe-down — leaves skin visibly calmer." },
+      { name: "Full Body Massage", note: "Relaxation or deep tissue, worked into whatever's been sitting in your shoulders all week." },
+    ],
+  },
+  {
+    category: "Grooming Extras",
+    img: locs02,
+    intro: "The small details that finish the look. Most clients add one of these on to a cut or shave — they take minutes but change how sharp everything else reads.",
+    items: [
+      { name: "Eyebrow Shaping", note: "Trimmed and defined without ever looking overdone." },
+      { name: "Ear & Nose Waxing", note: "Quick, discreet, and usually done while you're already in the chair." },
+      { name: "Scalp Treatment", note: "A conditioning massage that leaves the scalp calmer and the hair easier to style." },
+    ],
+  },
+];
+---
+
+<Layout title="Services" description="Full service menu at Blispa Barbershop & Spa — cuts, shaves, locs, braids, massages, facials, manicures and pedicures in Nairobi.">
+  <section class="mx-auto max-w-6xl px-5 pb-6 pt-16 text-center md:pt-24">
+    <p class="font-display text-sm uppercase tracking-[0.35em] text-gold-400">Our Menu</p>
+    <h1 class="mt-4 font-display text-4xl font-semibold text-cream md:text-5xl">
+      Services &amp; <span class="text-gold-gradient">Pricing</span>
+    </h1>
+    <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-cream/65">
+      Everything below is delivered by trained barbers and therapists in a relaxed, private setting — no
+      assembly-line ten-minute cuts. Prices vary by style, hair length and how much work a look actually needs,
+      so rather than post numbers that don't match your head, we'd rather just tell you straight on WhatsApp.
+      Send a photo of what you want, or describe your hair, and we'll quote you honestly before you even
+      walk in.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-12 md:py-16">
+    <div class="grid gap-10 md:grid-cols-2">
+      {menu.map((section) => (
+        <div class="overflow-hidden rounded-2xl border border-gold-800/30 bg-graphite">
+          <div class="aspect-[16/9] overflow-hidden">
+            <Image src={section.img} alt={section.category} width={800} height={450} class="h-full w-full object-cover" />
+          </div>
+          <div class="p-6 md:p-8">
+            <h2 class="font-display text-xl text-gold-300">{section.category}</h2>
+            <p class="mt-3 text-sm leading-relaxed text-cream/60">{section.intro}</p>
+            <ul class="mt-5 divide-y divide-gold-800/20">
+              {section.items.map((item) => (
+                <li class="py-3.5">
+                  <p class="text-sm font-semibold text-cream">{item.name}</p>
+                  <p class="mt-1 text-xs leading-relaxed text-cream/50">{item.note}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- How pricing works -->
+  <section class="border-y border-gold-800/30 bg-charcoal py-16 md:py-24">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">How Pricing Actually Works</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">Honest quotes, no surprise add-ons</h2>
+        <p class="mt-5 leading-relaxed text-cream/65">
+          A skin fade on short hair and a full retwist on shoulder-length locs are not the same job, so they're
+          never going to carry the same price — anyone who tells you otherwise is guessing. What we can promise
+          is that you'll know the number before you sit down, not after.
+        </p>
+        <p class="mt-4 leading-relaxed text-cream/65">
+          Message us on WhatsApp with a photo of your current hair (or the style you want) and we'll give you a
+          straight quote in minutes. No consultation fee, no pressure to add extras once you're in the chair.
+        </p>
+        <a
+          href="https://wa.me/254746200969"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-7 inline-block rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-7 py-3 text-sm font-semibold text-ink shadow-lg shadow-gold-900/40 transition-transform hover:scale-105"
+        >
+          Ask for a Quote
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={fade03} alt="Fresh fade at Blispa" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+        <div class="mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={beard01} alt="Beard lineup at Blispa" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pairings -->
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div class="max-w-2xl">
+      <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">Popular Combos</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">Ways clients stack their visit</h2>
+      <p class="mt-5 leading-relaxed text-cream/65">
+        Because the barbershop and spa share a floor, most regulars don't book one service — they book a block
+        of time and let us fill it. A few combinations that come up again and again:
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-2xl border border-gold-800/30 bg-graphite p-7">
+        <h3 class="font-display text-lg text-gold-300">The Full Reset</h3>
+        <p class="mt-3 text-sm leading-relaxed text-cream/65">Haircut + hot towel shave + scalp treatment. Walk out looking like you took the whole week off, not just an hour.</p>
+      </div>
+      <div class="rounded-2xl border border-gold-800/30 bg-graphite p-7">
+        <h3 class="font-display text-lg text-gold-300">Date-Night Prep</h3>
+        <p class="mt-3 text-sm leading-relaxed text-cream/65">Beard lineup + eyebrow shaping + manicure. Quick, sharp, and done in under an hour.</p>
+      </div>
+      <div class="rounded-2xl border border-gold-800/30 bg-graphite p-7">
+        <h3 class="font-display text-lg text-gold-300">The Long Weekend</h3>
+        <p class="mt-3 text-sm leading-relaxed text-cream/65">Full haircut + facial + full body massage. Book this one when you actually have the time to enjoy it.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 overflow-hidden rounded-2xl border border-gold-800/30">
+      <Image src={cut01} alt="Braiding work at Blispa" width={1200} height={500} class="h-64 w-full object-cover md:h-80" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 text-center md:py-20">
+    <h2 class="font-display text-2xl font-semibold text-cream md:text-3xl">Not sure what you need?</h2>
+    <p class="mx-auto mt-3 max-w-md text-cream/65">
+      Tell us your hair type and the look you're after — we'll recommend the right service and price on WhatsApp.
+    </p>
+    <a
+      href="https://wa.me/254746200969"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-7 inline-block rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-8 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-gold-900/40 transition-transform hover:scale-105"
+    >
+      Get a Quote on WhatsApp
+    </a>
+  </section>
+</Layout>

@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/brand/logo.jpg";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-gold-800/40 bg-charcoal">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
+    <div>
+      <div class="flex items-center gap-3">
+        <Image src={logo} alt="Blispa Barbershop & Spa" width={48} height={48} class="h-11 w-11 rounded-full object-cover ring-1 ring-gold-500/60" />
+        <span class="font-display text-lg text-cream">Blispa <span class="block text-xs font-sans uppercase tracking-[0.2em] text-gold-400">Barbershop &amp; Spa</span></span>
+      </div>
+      <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
+        Beauty, cosmetic &amp; personal care in the heart of Nairobi. Grooming, spa and self-care under one roof.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-display text-sm uppercase tracking-[0.2em] text-gold-400">Visit Us</h3>
+      <p class="mt-4 text-sm leading-relaxed text-cream/70">
+        Superior Centre, 4th Floor, Room K1<br />
+        Kenyatta Avenue &amp; Moi Avenue<br />
+        Nairobi, Kenya 00100
+      </p>
+      <p class="mt-4 text-sm text-cream/70">
+        <a href="tel:+254746200969" class="hover:text-gold-300">📲 0746 200 969</a>
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-display text-sm uppercase tracking-[0.2em] text-gold-400">Hours</h3>
+      <ul class="mt-4 space-y-1 text-sm text-cream/70">
+        <li class="flex justify-between gap-6"><span>Mon – Sat</span><span>8:00 AM – 8:00 PM</span></li>
+        <li class="flex justify-between gap-6"><span>Sunday</span><span>10:00 AM – 6:00 PM</span></li>
+      </ul>
+      <a
+        href="https://wa.me/254746200969"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-5 inline-block rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-5 py-2 text-sm font-semibold text-ink"
+      >
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-gold-800/30 px-5 py-5 text-center text-xs text-cream/40">
+    &copy; {year} Blispa Barbershop &amp; Spa. All rights reserved.
+  </div>
+</footer>

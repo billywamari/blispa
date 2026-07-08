@@ -1,0 +1,148 @@
+---
+interface Clip {
+  src: string;
+  poster: ImageMetadata;
+  label: string;
+}
+
+interface Props {
+  clips: Clip[];
+  intervalMs?: number;
+  /** "background" = full-bleed behind content (mobile hero); "panel" = bordered box (desktop side-by-side) */
+  variant?: "background" | "panel";
+  class?: string;
+}
+
+const { clips, intervalMs = 6000, variant = "panel", class: className } = Astro.props;
+
+const wrapperClass =
+  variant === "background"
+    ? "absolute inset-0 h-full w-full"
+    : "relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-800/30 shadow-2xl shadow-black/50 md:aspect-[3/4]";
+---
+
+<div class:list={["hero-carousel", wrapperClass, className]} data-interval={intervalMs} data-variant={variant}>
+  <div class="hero-carousel-track flex h-full w-full transition-transform duration-500 ease-out">
+    {clips.map((clip) => (
+      <div class="hero-carousel-slide relative h-full w-full flex-none">
+        <video
+          class="h-full w-full object-cover"
+          src={clip.src}
+          poster={clip.poster.src}
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        />
+        {variant === "panel" && (
+          <>
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+            <p class="pointer-events-none absolute bottom-4 left-4 right-4 font-display text-sm text-cream">{clip.label}</p>
+          </>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {variant === "background" && (
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/80 to-ink"></div>
+  )}
+
+  {variant === "panel" && (
+    <>
+      <button type="button" class="hero-carousel-prev absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-ink/50 p-2 text-cream backdrop-blur transition-colors hover:bg-ink/70" aria-label="Previous clip">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button type="button" class="hero-carousel-next absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-ink/50 p-2 text-cream backdrop-blur transition-colors hover:bg-ink/70" aria-label="Next clip">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <div class="hero-carousel-dots pointer-events-none absolute top-3 left-1/2 flex -translate-x-1/2 gap-1.5">
+        {clips.map((_, i) => (
+          <span class="hero-carousel-dot h-1.5 w-1.5 rounded-full bg-cream/40 transition-all" data-index={i}></span>
+        ))}
+      </div>
+    </>
+  )}
+</div>
+
+<script>
+  function initHeroCarousels() {
+    document.querySelectorAll<HTMLElement>(".hero-carousel").forEach((carousel) => {
+      if (carousel.dataset.initialized === "true") return;
+      carousel.dataset.initialized = "true";
+
+      const track = carousel.querySelector<HTMLElement>(".hero-carousel-track")!;
+      const slides = Array.from(carousel.querySelectorAll<HTMLElement>(".hero-carousel-slide"));
+      const videos = Array.from(carousel.querySelectorAll<HTMLVideoElement>("video"));
+      const dots = Array.from(carousel.querySelectorAll<HTMLElement>(".hero-carousel-dot"));
+      const prevBtn = carousel.querySelector<HTMLButtonElement>(".hero-carousel-prev");
+      const nextBtn = carousel.querySelector<HTMLButtonElement>(".hero-carousel-next");
+      const interval = Number(carousel.dataset.interval) || 6000;
+
+      let index = 0;
+      let timer: ReturnType<typeof setInterval> | null = null;
+
+      function isVisible() {
+        return carousel.offsetParent !== null;
+      }
+
+      function playOnly(i: number) {
+        if (!isVisible()) {
+          videos.forEach((v) => v.pause());
+          return;
+        }
+        videos.forEach((v, vi) => {
+          if (vi === i) {
+            v.currentTime = 0;
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      }
+
+      function goTo(i: number) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, di) => {
+          d.classList.toggle("bg-gold-400", di === index);
+          d.classList.toggle("bg-cream/40", di !== index);
+          d.classList.toggle("w-4", di === index);
+        });
+        playOnly(index);
+      }
+
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+
+      function resetTimer() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(next, interval);
+      }
+
+      prevBtn?.addEventListener("click", () => { prev(); resetTimer(); });
+      nextBtn?.addEventListener("click", () => { next(); resetTimer(); });
+
+      // Swipe support (also active in background variant, e.g. swiping the mobile hero)
+      let touchStartX = 0;
+      carousel.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      carousel.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) {
+          dx < 0 ? next() : prev();
+          resetTimer();
+        }
+      }, { passive: true });
+
+      goTo(0);
+      resetTimer();
+    });
+  }
+
+  document.addEventListener("astro:page-load", initHeroCarousels);
+  initHeroCarousels();
+</script>

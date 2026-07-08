@@ -1,0 +1,34 @@
+---
+interface Props {
+  src: string;
+  poster: ImageMetadata;
+  label: string;
+  class?: string;
+}
+
+const { src, poster, label, class: className } = Astro.props;
+---
+
+<div class:list={["group relative overflow-hidden rounded-2xl border border-gold-800/30 bg-graphite", className]}>
+  <video
+    class="aspect-[9/16] h-full w-full object-cover"
+    src={src}
+    poster={poster.src}
+    muted
+    loop
+    playsinline
+    preload="none"
+    onmouseenter="this.play()"
+    onmouseleave="this.pause(); this.currentTime = 0;"
+    onclick="this.paused ? this.play() : this.pause()"
+  />
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+  <div class="pointer-events-none absolute bottom-0 left-0 right-0 p-4">
+    <p class="font-display text-sm text-cream">{label}</p>
+  </div>
+  <div class="pointer-events-none absolute right-3 top-3 rounded-full bg-ink/60 p-2 opacity-90 backdrop-blur transition-opacity group-hover:opacity-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 text-gold-300">
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  </div>
+</div>

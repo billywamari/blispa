@@ -1,0 +1,118 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import barber01 from "../assets/gallery/barber-01.jpg";
+import cut03 from "../assets/gallery/cut-03.jpg";
+import gallery02 from "../assets/gallery/gallery-02.jpg";
+import fade02 from "../assets/gallery/fade-02.jpg";
+import locs01 from "../assets/gallery/locs-01.jpg";
+import gallery09 from "../assets/gallery/gallery-09.jpg";
+
+const team = [
+  {
+    name: "Add Barber Name",
+    role: "Lead Barber — Fades & Lineups",
+    bio: "The one people ask for by name when they want a skin fade cut precisely enough to see from the street. Trained on straight-razor lineups first, clippers second — which is why the beard work holds up as long as the haircut does.",
+    img: barber01,
+  },
+  {
+    name: "Add Stylist Name",
+    role: "Locs & Braids Specialist",
+    bio: "Treats every head of locs like a long-term project instead of a one-off appointment — tracking growth, adjusting the retwist schedule, and never rushing a parting just to finish faster.",
+    img: cut03,
+  },
+  {
+    name: "Add Therapist Name",
+    role: "Spa & Nail Technician",
+    bio: "Runs the pedicure and facial side of the shop with the kind of patience that turns a quick manicure into the most relaxing twenty minutes of a client's week.",
+    img: gallery02,
+  },
+];
+---
+
+<Layout title="Our Team" description="Meet the barbers and therapists behind Blispa Barbershop & Spa in Nairobi.">
+  <section class="mx-auto max-w-6xl px-5 pb-6 pt-16 text-center md:pt-24">
+    <p class="font-display text-sm uppercase tracking-[0.35em] text-gold-400">The Hands Behind the Craft</p>
+    <h1 class="mt-4 font-display text-4xl font-semibold text-cream md:text-5xl">
+      Meet the <span class="text-gold-gradient">Blispa Team</span>
+    </h1>
+    <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-cream/65">
+      A barbershop is only as good as the hands doing the work, and a spa is only as good as the people who
+      make you forget you're on a schedule. Ours are trained, detail-obsessed, and genuinely easy to talk to —
+      which, honestly, is half the reason clients keep booking the same chair every few weeks instead of
+      shopping around.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-12 md:py-16">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {team.map((member) => (
+        <div class="overflow-hidden rounded-2xl border border-gold-800/30 bg-graphite">
+          <div class="aspect-[4/5] overflow-hidden">
+            <Image src={member.img} alt={member.name} width={600} height={750} class="h-full w-full object-cover" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-lg text-cream">{member.name}</h3>
+            <p class="mt-1 text-sm text-gold-400">{member.role}</p>
+            <p class="mt-3 text-sm leading-relaxed text-cream/60">{member.bio}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="mx-auto mt-10 max-w-lg text-center text-xs text-cream/40">
+      Team names &amp; bios coming soon — photos and roles above are from real Blispa client sessions.
+    </p>
+  </section>
+
+  <!-- What it's like to train here -->
+  <section class="border-y border-gold-800/30 bg-charcoal py-16 md:py-24">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">How We Train</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">Nobody touches a client untrained</h2>
+        <p class="mt-5 leading-relaxed text-cream/65">
+          Every barber and therapist at Blispa works alongside a senior team member before they're ever handed
+          a full booking on their own. Fades are practiced on mannequins and staff first. Straight-razor work
+          is supervised for weeks before it's solo. It's slower than just hiring someone with a certificate and
+          hoping — but it's the only way we've found to guarantee that the chair you sit in gives you the same
+          result the founder would.
+        </p>
+        <p class="mt-4 leading-relaxed text-cream/65">
+          The result is a team where every member can genuinely do the job, not just talk about it — and where
+          "I'm still learning" is never the answer you get mid-service.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={fade02} alt="Barber at work" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+        <div class="mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={locs01} alt="Stylist at work" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+      <Image src={gallery09} alt="Blispa team at work" width={1200} height={500} class="h-64 w-full object-cover md:h-80" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 text-center md:py-20">
+    <h2 class="font-display text-2xl font-semibold text-cream md:text-3xl">Book with your favorite barber</h2>
+    <p class="mx-auto mt-3 max-w-md text-cream/65">
+      Let us know who you'd like to see when you message us — or tell us what you're after and we'll match you
+      with the right pair of hands.
+    </p>
+    <a
+      href="https://wa.me/254746200969"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-7 inline-block rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-8 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-gold-900/40 transition-transform hover:scale-105"
+    >
+      Book on WhatsApp
+    </a>
+  </section>
+</Layout>

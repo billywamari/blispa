@@ -1,0 +1,350 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import VideoCard from "../components/VideoCard.astro";
+import HeroVideoCarousel from "../components/HeroVideoCarousel.astro";
+import posterCut from "../assets/video-posters/cut-showcase.jpg";
+import posterWash from "../assets/video-posters/wash-relax.jpg";
+import posterFacial from "../assets/video-posters/facial-selfcare.jpg";
+import posterShave from "../assets/video-posters/hot-towel-shave.jpg";
+import posterSatisfaction from "../assets/video-posters/satisfaction.jpg";
+import posterBold from "../assets/video-posters/bold-color.jpg";
+import interior01 from "../assets/gallery/interior-01.jpg";
+import interior02 from "../assets/gallery/interior-02.jpg";
+import barber01 from "../assets/gallery/barber-01.jpg";
+import fade01 from "../assets/gallery/fade-01.jpg";
+import fade02 from "../assets/gallery/fade-02.jpg";
+import locs01 from "../assets/gallery/locs-01.jpg";
+import locs02 from "../assets/gallery/locs-02.jpg";
+import pedicure01 from "../assets/gallery/pedicure-01.jpg";
+import shave01 from "../assets/gallery/shave-01.jpg";
+import beard01 from "../assets/gallery/beard-01.jpg";
+import cut02 from "../assets/gallery/cut-02.jpg";
+import cut03 from "../assets/gallery/cut-03.jpg";
+import gallery02 from "../assets/gallery/gallery-02.jpg";
+import gallery04 from "../assets/gallery/gallery-04.jpg";
+import gallery05 from "../assets/gallery/gallery-05.jpg";
+import gallery08 from "../assets/gallery/gallery-08.jpg";
+import gallery09 from "../assets/gallery/gallery-09.jpg";
+
+const highlights = [
+  {
+    title: "Styling & Cuts",
+    copy: "This is where most people meet us — a skin fade that fades right, a taper that actually tapers, cornrows and braids laid with patience, and locs treated like the investment they are. We don't rush the line-up. We check it in three mirrors before you do.",
+    img: fade01,
+  },
+  {
+    title: "Spa & Self-Care",
+    copy: "The part of the shop most barbershops forget to build. Warm-water pedicure chairs, real manicure stations, facials that actually cleanse instead of just moisturizing, and massage that unknots the shoulders you've been carrying your whole week in.",
+    img: pedicure01,
+  },
+  {
+    title: "Shaves & Grooming",
+    copy: "Hot towel first, always. Then the straight razor does the rest — beard lines sharp enough to see from across the room, heads shaved to a clean shine, and grey blended so well nobody has to ask.",
+    img: shave01,
+  },
+];
+
+const stats = [
+  { value: "5.0★", label: "Client Rating" },
+  { value: "10+", label: "Services Offered" },
+  { value: "50,000+", label: "Clients Served" },
+];
+
+const journey = [
+  {
+    step: "01",
+    title: "You walk in (or WhatsApp first)",
+    copy: "No stiff booking forms. Message us on WhatsApp with what you want — or just show up. Either way, someone greets you at the door and points you to a chair, not a waiting room full of strangers.",
+    img: interior01,
+  },
+  {
+    step: "02",
+    title: "We talk before we touch",
+    copy: "Every session starts with a real conversation — your hair type, what's grown out, what you're bored of, what you saw on Instagram that you actually want (or definitely don't). We'd rather ask twice than guess once.",
+    img: gallery02,
+  },
+  {
+    step: "03",
+    title: "The work happens slowly, on purpose",
+    copy: "Fades are cut in stages, not rushed in one pass. Beards are shaped, then re-checked. Locs are parted with a comb, not eyeballed. You'll notice the pace the moment you sit down — it's unhurried because rushing is how bad haircuts happen.",
+    img: cut03,
+  },
+  {
+    step: "04",
+    title: "You leave looking like you meant it",
+    copy: "A last pass with the mirror, product recommendations if you want them, and a straight answer on when to come back in. No upsells you didn't ask for.",
+    img: gallery09,
+  },
+];
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <!-- Mobile: video plays full-bleed behind the text. Desktop: hidden, replaced by the side panel below. -->
+    <HeroVideoCarousel
+      variant="background"
+      class="md:hidden"
+      clips={[
+        { src: "/videos/cut-showcase.mp4", poster: posterCut, label: "Best Cuts" },
+        { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
+        { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
+        { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
+        { src: "/videos/satisfaction.mp4", poster: posterSatisfaction, label: "Satisfaction Guaranteed" },
+        { src: "/videos/bold-color.mp4", poster: posterBold, label: "Let's Go Bold" },
+      ]}
+    />
+    <div class="absolute inset-0 hidden md:block">
+      <Image src={interior01} alt="Blispa Barbershop & Spa interior" width={1600} height={1000} class="h-full w-full object-cover opacity-10" />
+      <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink/90 to-ink"></div>
+    </div>
+
+    <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-16 md:grid-cols-2 md:gap-12 md:pb-24 md:pt-24">
+      <div>
+        <p class="font-display text-sm uppercase tracking-[0.35em] text-gold-400">Nairobi's Premier Grooming Lounge</p>
+        <h1 class="mt-4 font-display text-4xl font-semibold leading-tight text-cream sm:text-5xl md:text-6xl">
+          Sharp Cuts. <span class="text-gold-gradient">Smooth Skin.</span> Total Self-Care.
+        </h1>
+        <p class="mt-6 text-base leading-relaxed text-cream/70 md:text-lg">
+          Blispa Barbershop &amp; Spa blends expert barbering with spa-grade relaxation — styling, locs, shaves,
+          massages, facials, manicures and pedicures, all under one gold-lit roof on the 4th floor of Superior
+          Centre. We built the kind of place where you can get a fresh fade at 6pm and a pedicure at 6:30, without
+          crossing the street.
+        </p>
+        <p class="mt-4 text-base leading-relaxed text-cream/60">
+          No rushed fifteen-minute cuts. No guesswork on the beard line. Just barbers and therapists who treat the
+          hour you give them like it matters — because it's the hour you get to feel like yourself again.
+        </p>
+
+        <div class="mt-9 flex flex-wrap justify-center gap-4 text-center sm:justify-start sm:text-left">
+          <a
+            href="https://wa.me/254746200969"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-7 py-3 text-sm font-semibold text-ink shadow-lg shadow-gold-900/40 transition-transform hover:scale-105"
+          >
+            Book an Appointment
+          </a>
+          <a
+            href="/services"
+            class="rounded-full border border-gold-500/60 px-7 py-3 text-sm font-semibold text-cream transition-colors hover:border-gold-300 hover:text-gold-300"
+          >
+            View Services
+          </a>
+        </div>
+
+        <dl class="mt-16 grid max-w-md grid-cols-3 gap-6 border-t border-gold-800/40 pt-8">
+          {stats.map((stat) => (
+            <div>
+              <dt class="font-display text-2xl text-gold-300">{stat.value}</dt>
+              <dd class="mt-1 text-xs uppercase tracking-wide text-cream/50">{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <HeroVideoCarousel
+        variant="panel"
+        class="hidden md:block"
+        clips={[
+          { src: "/videos/cut-showcase.mp4", poster: posterCut, label: "Best Cuts" },
+          { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
+          { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
+          { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
+          { src: "/videos/satisfaction.mp4", poster: posterSatisfaction, label: "Satisfaction Guaranteed" },
+          { src: "/videos/bold-color.mp4", poster: posterBold, label: "Let's Go Bold" },
+        ]}
+      />
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div class="max-w-2xl">
+      <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">What We Do</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">Grooming, spa &amp; self-care — properly, under one roof</h2>
+      <p class="mt-5 leading-relaxed text-cream/65">
+        Most barbershops stop at the haircut. Most spas never touch a beard. We built Blispa because Nairobi
+        needed a place that does both without making you choose — where the same visit can cover your fade,
+        your feet, and your face, and every one of those gets the same level of care.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {highlights.map((item) => (
+        <div class="group overflow-hidden rounded-2xl border border-gold-800/30 bg-graphite">
+          <div class="aspect-[4/3] overflow-hidden">
+            <Image
+              src={item.img}
+              alt={item.title}
+              width={600}
+              height={450}
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-lg text-gold-300">{item.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-cream/65">{item.copy}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="/services" class="text-sm font-semibold uppercase tracking-wide text-gold-400 hover:text-gold-300">
+        See the full menu &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Watch the Work -->
+  <section class="py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="max-w-2xl">
+        <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">Watch The Work</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">See it happen, not just the result</h2>
+        <p class="mt-5 leading-relaxed text-cream/65">
+          Photos show you the finish. These clips show you the process — the fade being cut in stages, the hot
+          towel going on before the razor, the wash that starts every service. Tap a clip to play it, or hover
+          on desktop.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <VideoCard src="/videos/cut-showcase.mp4" poster={posterCut} label="Best Cuts" />
+        <VideoCard src="/videos/wash-relax.mp4" poster={posterWash} label="Where Style Meets Relaxation" />
+        <VideoCard src="/videos/hot-towel-shave.mp4" poster={posterShave} label="Hot Towel Ritual" />
+        <VideoCard src="/videos/facial-selfcare.mp4" poster={posterFacial} label="Self-Care: Facial & Skin TLC" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Interior story -->
+  <section class="border-y border-gold-800/30 bg-charcoal py-16 md:py-24">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+      <div class="overflow-hidden rounded-2xl border border-gold-800/30 order-2 md:order-1">
+        <Image src={interior02} alt="Inside Blispa Barbershop & Spa" width={800} height={1000} class="h-full w-full object-cover" />
+      </div>
+      <div class="order-1 md:order-2">
+        <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">Step Inside</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">A room built to slow you down</h2>
+        <p class="mt-5 leading-relaxed text-cream/65">
+          Gold-lit mirrors run the length of the wall. The chairs are the tufted, wide-armed kind you sink into
+          rather than perch on. Somewhere a match is playing on the TV, someone's getting a straight-razor
+          lineup two seats down, and nobody's checking the clock.
+        </p>
+        <p class="mt-4 leading-relaxed text-cream/65">
+          It's not an accident. We designed Blispa around the idea that grooming should feel like a pause in
+          your day, not another errand squeezed between meetings. That's the whole reason the barbershop and
+          the spa share a floor — so the hour you set aside for yourself can actually stretch as far as you
+          need it to.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div class="max-w-2xl">
+      <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">What Actually Happens</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">A visit to Blispa, start to finish</h2>
+      <p class="mt-5 leading-relaxed text-cream/65">
+        If you've never been in, here's exactly what to expect — no surprises, no upsell ambush, no fifteen
+        minutes of small talk before anyone picks up a clipper.
+      </p>
+    </div>
+
+    <div class="mt-12 space-y-14">
+      {journey.map((item, i) => (
+        <div class:list={["grid items-center gap-8 md:grid-cols-2", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+          <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+            <Image src={item.img} alt={item.title} width={700} height={525} class="aspect-[4/3] h-full w-full object-cover" />
+          </div>
+          <div>
+            <span class="font-display text-4xl text-gold-800">{item.step}</span>
+            <h3 class="mt-2 font-display text-2xl text-cream">{item.title}</h3>
+            <p class="mt-4 leading-relaxed text-cream/65">{item.copy}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Gallery strip -->
+  <section class="border-y border-gold-800/30 bg-charcoal py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div class="max-w-xl">
+          <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">Fresh Cuts Daily</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">From the chair</h2>
+          <p class="mt-4 leading-relaxed text-cream/65">
+            Every photo below is an actual client, cut by our actual barbers, on an actual Tuesday. No stock
+            photography, no borrowed inspiration boards — just the work, as it left the chair.
+          </p>
+        </div>
+        <a href="/gallery" class="text-sm font-semibold uppercase tracking-wide text-gold-400 hover:text-gold-300">
+          Full Gallery &rarr;
+        </a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+        {[barber01, beard01, locs01, gallery04, fade02, cut02, locs02, gallery05].map((img) => (
+          <div class="aspect-square overflow-hidden rounded-xl">
+            <Image src={img} alt="Blispa client work" width={500} height={500} class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Blispa -->
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div class="grid gap-12 md:grid-cols-2 md:items-center">
+      <div>
+        <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">Why People Come Back</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">
+          It's never just a haircut here
+        </h2>
+        <p class="mt-5 leading-relaxed text-cream/65">
+          Ask any regular why they keep the same seat every few weeks and it's rarely just "the fade is clean."
+          It's that the same barber remembers how you like your edges. It's that nobody's phone is buzzing every
+          two minutes because the shop respects the next client's time as much as yours. It's the small stuff —
+          a hot towel that's actually hot, a chair that reclines all the way back, a straight razor kept sharp
+          enough that you barely feel it move.
+        </p>
+        <p class="mt-4 leading-relaxed text-cream/65">
+          We'd rather earn a loyal client over six visits than impress a walk-in once and never see them again.
+          That's the whole business model, honestly.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={gallery08} alt="Blispa barber at work" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+        <div class="mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={cut03} alt="Blispa client work" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-6xl px-5 py-16 text-center md:py-24">
+    <h2 class="font-display text-3xl font-semibold text-cream md:text-4xl">
+      Ready for a <span class="text-gold-gradient">fresh look?</span>
+    </h2>
+    <p class="mx-auto mt-4 max-w-lg text-cream/65">
+      Walk in or message us ahead of time — Superior Centre, 4th Floor Room K1, Kenyatta Avenue, Nairobi.
+      We'll have a chair ready either way.
+    </p>
+    <a
+      href="https://wa.me/254746200969"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-8 inline-block rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-8 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-gold-900/40 transition-transform hover:scale-105"
+    >
+      Chat with Us on WhatsApp
+    </a>
+  </section>
+</Layout>

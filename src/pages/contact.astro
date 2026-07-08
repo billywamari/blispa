@@ -1,0 +1,134 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import interior01 from "../assets/gallery/interior-01.jpg";
+import gallery04 from "../assets/gallery/gallery-04.jpg";
+
+const mapQuery = encodeURIComponent("Superior Centre, Kenyatta Avenue, Nairobi, Kenya");
+---
+
+<Layout title="Contact" description="Book, call or visit Blispa Barbershop & Spa at Superior Centre, Kenyatta Avenue, Nairobi.">
+  <section class="mx-auto max-w-6xl px-5 pb-6 pt-16 text-center md:pt-24">
+    <p class="font-display text-sm uppercase tracking-[0.35em] text-gold-400">Get In Touch</p>
+    <h1 class="mt-4 font-display text-4xl font-semibold text-cream md:text-5xl">
+      Book Your <span class="text-gold-gradient">Next Visit</span>
+    </h1>
+    <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-cream/65">
+      Message us on WhatsApp, call directly, or just walk in — whichever is easiest for you works for us. We
+      don't run a rigid booking system with cancellation fees and rescheduling headaches; we run a shop where
+      someone answers the phone and a chair gets held for you.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-12 md:py-16">
+    <div class="grid gap-10 md:grid-cols-2">
+      <div class="space-y-6">
+        <a
+          href="https://wa.me/254746200969"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-4 rounded-2xl border border-gold-800/30 bg-graphite p-6 transition-colors hover:border-gold-400/60"
+        >
+          <span class="text-3xl">💬</span>
+          <div>
+            <p class="font-display text-lg text-cream">WhatsApp</p>
+            <p class="text-sm text-cream/60">Fastest way to book — 0746 200 969. Send a photo of the style you want and we'll quote you back in minutes.</p>
+          </div>
+        </a>
+
+        <a
+          href="tel:+254746200969"
+          class="flex items-center gap-4 rounded-2xl border border-gold-800/30 bg-graphite p-6 transition-colors hover:border-gold-400/60"
+        >
+          <span class="text-3xl">📲</span>
+          <div>
+            <p class="font-display text-lg text-cream">Call Us</p>
+            <p class="text-sm text-cream/60">0746 200 969 — for anyone who'd rather just talk it through than type it out.</p>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-4 rounded-2xl border border-gold-800/30 bg-graphite p-6">
+          <span class="text-3xl">📍</span>
+          <div>
+            <p class="font-display text-lg text-cream">Visit Us</p>
+            <p class="text-sm leading-relaxed text-cream/60">
+              Superior Centre, 4th Floor, Room K1<br />
+              Kenyatta Avenue &amp; Moi Avenue<br />
+              Nairobi, Kenya 00100
+            </p>
+            <p class="mt-2 text-xs leading-relaxed text-cream/45">
+              Take the lift to the 4th floor and follow the gold signage — Room K1 is a short walk down the hall.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-2xl border border-gold-800/30 bg-graphite p-6">
+          <span class="text-3xl">🕗</span>
+          <div>
+            <p class="font-display text-lg text-cream">Hours</p>
+            <p class="text-sm text-cream/60">Mon – Sat: 8:00 AM – 8:00 PM</p>
+            <p class="text-sm text-cream/60">Sunday: 10:00 AM – 6:00 PM</p>
+            <p class="mt-2 text-xs leading-relaxed text-cream/45">
+              Evenings and Saturdays fill up first — if you have a specific time in mind, message ahead.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+        <iframe
+          title="Blispa Barbershop & Spa location"
+          class="h-full min-h-[420px] w-full"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to expect when you arrive -->
+  <section class="border-y border-gold-800/30 bg-charcoal py-16 md:py-24">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+      <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+        <Image src={interior01} alt="Blispa Barbershop & Spa reception" width={800} height={1000} class="h-full w-full object-cover" />
+      </div>
+      <div>
+        <p class="font-display text-sm uppercase tracking-[0.3em] text-gold-400">First Time Here?</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">Here's exactly what to expect</h2>
+        <p class="mt-5 leading-relaxed text-cream/65">
+          You'll come up the lift to the 4th floor, follow the signage to Room K1, and be greeted at the door
+          rather than left to find a seat yourself. If you booked ahead, your barber or therapist will already
+          know roughly what you're after. If you walked in, we'll ask a few quick questions and get you settled
+          within a few minutes — we very rarely run a long wait.
+        </p>
+        <p class="mt-4 leading-relaxed text-cream/65">
+          Bring a reference photo if you have one in mind, or just describe the vibe and let your barber guide
+          you. Either way works — we'd rather ask questions upfront than surprise you with the result.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+      <Image src={gallery04} alt="Inside Blispa Barbershop & Spa" width={1200} height={480} class="h-56 w-full object-cover md:h-72" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 text-center md:py-20">
+    <h2 class="font-display text-2xl font-semibold text-cream md:text-3xl">Prefer to just walk in?</h2>
+    <p class="mx-auto mt-3 max-w-md leading-relaxed text-cream/65">
+      We're on the 4th Floor of Superior Centre — come find us between Kenyatta and Moi Avenue. No appointment
+      required, though messaging ahead means less time waiting and more time in the chair.
+    </p>
+    <a
+      href="https://wa.me/254746200969"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-7 inline-block rounded-full bg-gradient-to-r from-gold-500 to-gold-300 px-8 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-gold-900/40 transition-transform hover:scale-105"
+    >
+      Message Us on WhatsApp
+    </a>
+  </section>
+</Layout>

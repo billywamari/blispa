@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+
+  --color-ink: #0a0a0a;
+  --color-charcoal: #141414;
+  --color-graphite: #1e1e1e;
+
+  --color-gold-50: #fdf8ec;
+  --color-gold-100: #f8ecc9;
+  --color-gold-200: #f0d78e;
+  --color-gold-300: #e8c15c;
+  --color-gold-400: #dba934;
+  --color-gold-500: #c6912a;
+  --color-gold-600: #a8761f;
+  --color-gold-700: #8a5e1b;
+  --color-gold-800: #6b4715;
+  --color-gold-900: #4a3110;
+
+  --color-cream: #f7f3ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gold-gradient {
+  background-image: linear-gradient(115deg, #e8c15c 0%, #dba934 30%, #a8761f 55%, #dba934 75%, #f0d78e 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(115deg, #8a5e1b, #e8c15c, #8a5e1b) 1;
+}
