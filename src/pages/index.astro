@@ -27,6 +27,14 @@ import gallery05 from "../assets/gallery/gallery-05.jpg";
 import gallery08 from "../assets/gallery/gallery-08.jpg";
 import gallery09 from "../assets/gallery/gallery-09.jpg";
 
+const watchTheWorkClips = [
+  { src: "/videos/cut-showcase.mp4", poster: posterCut, label: "Best Cuts" },
+  { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
+  { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
+  { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
+];
+const watchTheWorkPlaylist = watchTheWorkClips.map((c) => ({ src: c.src, poster: c.poster.src, label: c.label }));
+
 const highlights = [
   {
     title: "Styling & Cuts",
@@ -106,13 +114,21 @@ const journey = [
         <h1 class="mt-4 font-display text-4xl font-semibold leading-tight text-cream sm:text-5xl md:text-6xl">
           Sharp Cuts. <span class="text-gold-gradient">Smooth Skin.</span> Total Self-Care.
         </h1>
-        <p class="mt-6 text-base leading-relaxed text-cream/70 md:text-lg">
+        <p class="mt-6 text-base leading-relaxed text-cream/70 md:hidden">
+          Blispa Barbershop &amp; Spa blends expert barbering with spa-grade relaxation — styling, locs, shaves,
+          massages, facials, manicures and pedicures, all under one gold-lit roof. Get a fresh fade at 6pm and
+          a pedicure at 6:30, without crossing the street.
+        </p>
+        <p class="mt-4 text-base leading-relaxed text-cream/60 md:hidden">
+          No rushed cuts, no guesswork on the beard line — just barbers who treat your hour like it matters.
+        </p>
+        <p class="mt-6 hidden text-base leading-relaxed text-cream/70 md:block md:text-lg">
           Blispa Barbershop &amp; Spa blends expert barbering with spa-grade relaxation — styling, locs, shaves,
           massages, facials, manicures and pedicures, all under one gold-lit roof on the 4th floor of Superior
           Centre. We built the kind of place where you can get a fresh fade at 6pm and a pedicure at 6:30, without
           crossing the street.
         </p>
-        <p class="mt-4 text-base leading-relaxed text-cream/60">
+        <p class="mt-4 hidden text-base leading-relaxed text-cream/60 md:block">
           No rushed fifteen-minute cuts. No guesswork on the beard line. Just barbers and therapists who treat the
           hour you give them like it matters — because it's the hour you get to feel like yourself again.
         </p>
@@ -212,10 +228,9 @@ const journey = [
       </div>
 
       <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <VideoCard src="/videos/cut-showcase.mp4" poster={posterCut} label="Best Cuts" />
-        <VideoCard src="/videos/wash-relax.mp4" poster={posterWash} label="Where Style Meets Relaxation" />
-        <VideoCard src="/videos/hot-towel-shave.mp4" poster={posterShave} label="Hot Towel Ritual" />
-        <VideoCard src="/videos/facial-selfcare.mp4" poster={posterFacial} label="Self-Care: Facial & Skin TLC" />
+        {watchTheWorkClips.map((clip, i) => (
+          <VideoCard src={clip.src} poster={clip.poster} label={clip.label} playlist={watchTheWorkPlaylist} index={i} />
+        ))}
       </div>
     </div>
   </section>

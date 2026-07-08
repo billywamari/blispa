@@ -19,11 +19,19 @@ const wrapperClass =
   variant === "background"
     ? "absolute inset-0 h-full w-full"
     : "relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-800/30 shadow-2xl shadow-black/50 md:aspect-[3/4]";
+
+const playlist = clips.map((c) => ({ src: c.src, poster: c.poster.src, label: c.label }));
 ---
 
-<div class:list={["hero-carousel", wrapperClass, className]} data-interval={intervalMs} data-variant={variant}>
+<div
+  class:list={["hero-carousel", wrapperClass, className]}
+  data-interval={intervalMs}
+  data-variant={variant}
+  data-fsv-group
+  data-fsv-playlist={JSON.stringify(playlist)}
+>
   <div class="hero-carousel-track flex h-full w-full transition-transform duration-500 ease-out">
-    {clips.map((clip) => (
+    {clips.map((clip, i) => (
       <div class="hero-carousel-slide relative h-full w-full flex-none">
         <video
           class="h-full w-full object-cover"
@@ -35,6 +43,7 @@ const wrapperClass =
           playsinline
           preload="metadata"
         />
+        <button type="button" data-fsv-open data-fsv-index={i} class="absolute inset-0 h-full w-full cursor-pointer" aria-label={`Play with sound: ${clip.label}`}></button>
         {variant === "panel" && (
           <>
             <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>

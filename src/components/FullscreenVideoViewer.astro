@@ -1,0 +1,151 @@
+---
+---
+
+<div
+  id="fullscreen-video-viewer"
+  class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Video player"
+>
+  <button
+    type="button"
+    id="fsv-close"
+    class="absolute right-4 top-4 z-10 rounded-full bg-ink/60 p-2.5 text-cream backdrop-blur transition-colors hover:bg-ink/80"
+    aria-label="Close video"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <button
+    type="button"
+    id="fsv-prev"
+    class="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-ink/50 p-2.5 text-cream backdrop-blur transition-colors hover:bg-ink/70 sm:left-4"
+    aria-label="Previous clip"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+  </button>
+  <button
+    type="button"
+    id="fsv-next"
+    class="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-ink/50 p-2.5 text-cream backdrop-blur transition-colors hover:bg-ink/70 sm:right-4"
+    aria-label="Next clip"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+  </button>
+
+  <div class="relative h-[92vh] w-full max-w-md">
+    <video
+      id="fsv-video"
+      class="h-full w-full rounded-xl object-contain"
+      playsinline
+      controls
+    ></video>
+    <p id="fsv-label" class="pointer-events-none absolute bottom-4 left-4 right-4 text-center font-display text-sm text-cream"></p>
+  </div>
+</div>
+
+<script>
+  type Clip = { src: string; poster?: string; label: string };
+
+  let playlist: Clip[] = [];
+  let currentIndex = 0;
+
+  function getEls() {
+    const overlay = document.getElementById("fullscreen-video-viewer")!;
+    const video = document.getElementById("fsv-video") as HTMLVideoElement;
+    const label = document.getElementById("fsv-label")!;
+    const closeBtn = document.getElementById("fsv-close")!;
+    const prevBtn = document.getElementById("fsv-prev")!;
+    const nextBtn = document.getElementById("fsv-next")!;
+    return { overlay, video, label, closeBtn, prevBtn, nextBtn };
+  }
+
+  function open(clips: Clip[], startIndex: number) {
+    playlist = clips;
+    currentIndex = startIndex;
+    const { overlay } = getEls();
+    overlay.classList.remove("hidden");
+    overlay.classList.add("flex");
+    document.body.style.overflow = "hidden";
+    render();
+  }
+
+  function close() {
+    const { overlay, video } = getEls();
+    video.pause();
+    overlay.classList.add("hidden");
+    overlay.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  function render() {
+    const { video, label } = getEls();
+    const clip = playlist[currentIndex];
+    if (!clip) return;
+    video.src = clip.src;
+    if (clip.poster) video.poster = clip.poster;
+    video.muted = false;
+    video.currentTime = 0;
+    video.play().catch(() => {});
+    label.textContent = clip.label;
+  }
+
+  function next() {
+    currentIndex = (currentIndex + 1) % playlist.length;
+    render();
+  }
+
+  function prev() {
+    currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
+    render();
+  }
+
+  function init() {
+    const { overlay, closeBtn, prevBtn, nextBtn } = getEls();
+    if (overlay.dataset.initialized === "true") return;
+    overlay.dataset.initialized = "true";
+
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", prev);
+    nextBtn.addEventListener("click", next);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (overlay.classList.contains("hidden")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    });
+
+    let touchStartX = 0;
+    overlay.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    overlay.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) (dx < 0 ? next : prev)();
+    }, { passive: true });
+
+    // Any element with data-fsv-open registers a click to open the shared viewer.
+    // It must sit inside a container carrying data-fsv-playlist (JSON array of {src,poster,label})
+    // and its own data-fsv-index.
+    document.querySelectorAll<HTMLElement>("[data-fsv-open]").forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        const container = trigger.closest<HTMLElement>("[data-fsv-group]");
+        if (!container) return;
+        const playlistData = container.dataset.fsvPlaylist;
+        if (!playlistData) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const clips: Clip[] = JSON.parse(playlistData);
+        const index = Number(trigger.dataset.fsvIndex) || 0;
+        open(clips, index);
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", init);
+  init();
+</script>

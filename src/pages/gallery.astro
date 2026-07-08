@@ -9,6 +9,12 @@ const imageModules = import.meta.glob("../assets/gallery/*.jpg", { eager: true }
 const sorted = Object.entries(imageModules)
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([, mod]) => (mod as { default: ImageMetadata }).default);
+
+const reactionClips = [
+  { src: "/videos/satisfaction.mp4", poster: posterSatisfaction, label: "Satisfaction Guaranteed" },
+  { src: "/videos/bold-color.mp4", poster: posterBold, label: "Let's Go Bold" },
+];
+const reactionPlaylist = reactionClips.map((c) => ({ src: c.src, poster: c.poster.src, label: c.label }));
 ---
 
 <Layout title="Gallery" description="See real cuts, shaves, locs and spa work from Blispa Barbershop & Spa in Nairobi.">
@@ -32,8 +38,9 @@ const sorted = Object.entries(imageModules)
       <h2 class="mt-3 font-display text-2xl font-semibold text-cream md:text-3xl">A couple of reactions, unscripted</h2>
     </div>
     <div class="mt-8 grid grid-cols-2 gap-4 sm:max-w-md">
-      <VideoCard src="/videos/satisfaction.mp4" poster={posterSatisfaction} label="Satisfaction Guaranteed" />
-      <VideoCard src="/videos/bold-color.mp4" poster={posterBold} label="Let's Go Bold" />
+      {reactionClips.map((clip, i) => (
+        <VideoCard src={clip.src} poster={clip.poster} label={clip.label} playlist={reactionPlaylist} index={i} />
+      ))}
     </div>
   </section>
 
