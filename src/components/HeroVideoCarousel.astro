@@ -18,7 +18,7 @@ const { clips, intervalMs = 6000, variant = "panel", class: className } = Astro.
 const wrapperClass =
   variant === "background"
     ? "absolute inset-0 h-full w-full"
-    : "relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-800/30 shadow-2xl shadow-black/50 md:aspect-[3/4]";
+    : "relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-800/30 shadow-2xl shadow-black/50 md:aspect-[5/6]";
 
 const playlist = clips.map((c) => ({ src: c.src, poster: c.poster.src, label: c.label }));
 ---
