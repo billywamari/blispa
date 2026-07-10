@@ -9,6 +9,8 @@ import posterFacial from "../assets/video-posters/facial-selfcare.jpg";
 import posterShave from "../assets/video-posters/hot-towel-shave.jpg";
 import posterSatisfaction from "../assets/video-posters/satisfaction.jpg";
 import posterBold from "../assets/video-posters/bold-color.jpg";
+import posterMassage from "../assets/video-posters/hands-massage.jpg";
+import posterEvent from "../assets/video-posters/blispa-event.jpg";
 import interior01 from "../assets/gallery/interior-01.jpg";
 import interior02 from "../assets/gallery/interior-02.jpg";
 import barber01 from "../assets/gallery/barber-01.jpg";
@@ -32,6 +34,8 @@ const watchTheWorkClips = [
   { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
   { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
   { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
+  { src: "/videos/hands-massage.mp4", poster: posterMassage, label: "Gentle Hands for a Gentleman" },
+  { src: "/videos/blispa-event.mp4", poster: posterEvent, label: "Blispa at the Kadallas Experience" },
 ];
 const watchTheWorkPlaylist = watchTheWorkClips.map((c) => ({ src: c.src, poster: c.poster.src, label: c.label }));
 
@@ -97,6 +101,7 @@ const journey = [
       clips={[
         { src: "/videos/cut-showcase.mp4", poster: posterCut, label: "Best Cuts" },
         { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
+        { src: "/videos/hands-massage.mp4", poster: posterMassage, label: "Gentle Hands for a Gentleman" },
         { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
         { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
         { src: "/videos/satisfaction.mp4", poster: posterSatisfaction, label: "Satisfaction Guaranteed" },
@@ -166,6 +171,7 @@ const journey = [
         clips={[
           { src: "/videos/cut-showcase.mp4", poster: posterCut, label: "Best Cuts" },
           { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
+          { src: "/videos/hands-massage.mp4", poster: posterMassage, label: "Gentle Hands for a Gentleman" },
           { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
           { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
           { src: "/videos/satisfaction.mp4", poster: posterSatisfaction, label: "Satisfaction Guaranteed" },
@@ -227,7 +233,7 @@ const journey = [
         </p>
       </div>
 
-      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
         {watchTheWorkClips.map((clip, i) => (
           <VideoCard src={clip.src} poster={clip.poster} label={clip.label} playlist={watchTheWorkPlaylist} index={i} />
         ))}
