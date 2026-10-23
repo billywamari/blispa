@@ -6,6 +6,7 @@ import pedicure01 from "../assets/gallery/pedicure-01.jpg";
 import fade03 from "../assets/gallery/fade-03.jpg";
 import beard01 from "../assets/gallery/beard-01.jpg";
 import cut01 from "../assets/gallery/cut-01.jpg";
+import shave02 from "../assets/gallery/shave-02.jpg";
 
 const menu = [
   {
@@ -142,8 +143,13 @@ const menu = [
       </div>
     </div>
 
-    <div class="mt-12 overflow-hidden rounded-2xl border border-gold-800/30">
-      <Image src={cut01} alt="Braiding work at Blispa" width={1200} height={500} class="h-64 w-full object-cover md:h-80" />
+    <div class="mt-12 grid grid-cols-2 gap-4">
+      <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+        <Image src={cut01} alt="Braiding work at Blispa" width={600} height={400} class="h-64 w-full object-cover md:h-80" />
+      </div>
+      <div class="overflow-hidden rounded-2xl border border-gold-800/30">
+        <Image src={shave02} alt="Straight razor beard lineup at Blispa" width={600} height={400} class="h-64 w-full object-cover md:h-80" />
+      </div>
     </div>
   </section>
 

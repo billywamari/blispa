@@ -11,15 +11,22 @@ import posterSatisfaction from "../assets/video-posters/satisfaction.jpg";
 import posterBold from "../assets/video-posters/bold-color.jpg";
 import posterMassage from "../assets/video-posters/hands-massage.jpg";
 import posterEvent from "../assets/video-posters/blispa-event.jpg";
+import posterStyleShowcase from "../assets/video-posters/style-showcase.jpg";
+import posterBobCut from "../assets/video-posters/precision-bob-cut.jpg";
+import posterMeetTeam from "../assets/video-posters/meet-the-team.jpg";
 import interior01 from "../assets/gallery/interior-01.jpg";
 import interior02 from "../assets/gallery/interior-02.jpg";
 import barber01 from "../assets/gallery/barber-01.jpg";
 import fade01 from "../assets/gallery/fade-01.jpg";
 import fade02 from "../assets/gallery/fade-02.jpg";
+import fade04 from "../assets/gallery/fade-04.jpg";
 import locs01 from "../assets/gallery/locs-01.jpg";
 import locs02 from "../assets/gallery/locs-02.jpg";
+import locs03 from "../assets/gallery/locs-03.jpg";
 import pedicure01 from "../assets/gallery/pedicure-01.jpg";
-import shave01 from "../assets/gallery/shave-01.jpg";
+import shave02 from "../assets/gallery/shave-02.jpg";
+import barber02 from "../assets/gallery/barber-02.jpg";
+import locs04 from "../assets/gallery/locs-04.jpg";
 import beard01 from "../assets/gallery/beard-01.jpg";
 import cut02 from "../assets/gallery/cut-02.jpg";
 import cut03 from "../assets/gallery/cut-03.jpg";
@@ -31,9 +38,11 @@ import gallery09 from "../assets/gallery/gallery-09.jpg";
 
 const watchTheWorkClips = [
   { src: "/videos/cut-showcase.mp4", poster: posterCut, label: "Best Cuts" },
-  { src: "/videos/wash-relax.mp4", poster: posterWash, label: "Where Style Meets Relaxation" },
+  { src: "/videos/precision-bob-cut.mp4", poster: posterBobCut, label: "Precision Bob Cut" },
   { src: "/videos/hot-towel-shave.mp4", poster: posterShave, label: "Hot Towel Ritual" },
+  { src: "/videos/style-showcase.mp4", poster: posterStyleShowcase, label: "A Session, Start to Finish" },
   { src: "/videos/facial-selfcare.mp4", poster: posterFacial, label: "Self-Care: Facial & Skin TLC" },
+  { src: "/videos/meet-the-team.mp4", poster: posterMeetTeam, label: "Say Hi to the Front Desk" },
   { src: "/videos/hands-massage.mp4", poster: posterMassage, label: "Gentle Hands for a Gentleman" },
   { src: "/videos/blispa-event.mp4", poster: posterEvent, label: "Blispa at the Kadallas Experience" },
 ];
@@ -53,7 +62,7 @@ const highlights = [
   {
     title: "Shaves & Grooming",
     copy: "Hot towel first, always. Then the straight razor does the rest — beard lines sharp enough to see from across the room, heads shaved to a clean shine, and grey blended so well nobody has to ask.",
-    img: shave01,
+    img: shave02,
   },
 ];
 
@@ -310,7 +319,7 @@ const journey = [
       </div>
 
       <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {[barber01, beard01, locs01, gallery04, fade02, cut02, locs02, gallery05].map((img) => (
+        {[fade04, barber01, locs03, beard01, gallery04, locs01, fade02, gallery05, cut02, locs02].map((img) => (
           <div class="aspect-square overflow-hidden rounded-xl">
             <Image src={img} alt="Blispa client work" width={500} height={500} class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" />
           </div>
@@ -345,6 +354,12 @@ const journey = [
         </div>
         <div class="mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
           <Image src={cut03} alt="Blispa client work" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+        <div class="aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={locs04} alt="Barber styling locs at Blispa" width={500} height={666} class="h-full w-full object-cover" />
+        </div>
+        <div class="mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
+          <Image src={barber02} alt="Blispa barber portrait" width={500} height={666} class="h-full w-full object-cover" />
         </div>
       </div>
     </div>

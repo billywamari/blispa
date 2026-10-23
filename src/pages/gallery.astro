@@ -9,6 +9,10 @@ import posterLocationIntro from "../assets/video-posters/location-intro.jpg";
 import posterBehindTheChair from "../assets/video-posters/behind-the-chair.jpg";
 import posterGroomed from "../assets/video-posters/groomed-to-perfection.jpg";
 import posterSpaLounge from "../assets/video-posters/spa-lounge.jpg";
+import posterShaveStyle from "../assets/video-posters/straight-razor-shave.jpg";
+import posterTwistStyle from "../assets/video-posters/twist-style.jpg";
+import posterBobCut from "../assets/video-posters/precision-bob-cut.jpg";
+import posterMeetTeam from "../assets/video-posters/meet-the-team.jpg";
 
 const imageModules = import.meta.glob("../assets/gallery/*.jpg", { eager: true });
 const sorted = Object.entries(imageModules)
@@ -17,8 +21,12 @@ const sorted = Object.entries(imageModules)
 
 const reactionClips = [
   { src: "/videos/satisfaction.mp4", poster: posterSatisfaction, label: "Satisfaction Guaranteed" },
+  { src: "/videos/straight-razor-shave.mp4", poster: posterShaveStyle, label: "Straight Razor Lineup" },
   { src: "/videos/bold-color.mp4", poster: posterBold, label: "Let's Go Bold" },
+  { src: "/videos/precision-bob-cut.mp4", poster: posterBobCut, label: "Precision Bob Cut" },
   { src: "/videos/team-intro.mp4", poster: posterTeamIntro, label: "Maureen & JP" },
+  { src: "/videos/twist-style.mp4", poster: posterTwistStyle, label: "Twist Out Styling" },
+  { src: "/videos/meet-the-team.mp4", poster: posterMeetTeam, label: "Say Hi to the Front Desk" },
   { src: "/videos/location-intro.mp4", poster: posterLocationIntro, label: "Superior Centre, 4th Floor" },
   { src: "/videos/behind-the-chair.mp4", poster: posterBehindTheChair, label: "Behind the Chair" },
   { src: "/videos/groomed-to-perfection.mp4", poster: posterGroomed, label: "Groomed to Perfection" },
