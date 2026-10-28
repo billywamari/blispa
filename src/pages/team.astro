@@ -10,19 +10,16 @@ import gallery09 from "../assets/gallery/gallery-09.jpg";
 
 const team = [
   {
-    name: "Add Barber Name",
     role: "Lead Barber — Fades & Lineups",
     bio: "The one people ask for by name when they want a skin fade cut precisely enough to see from the street. Trained on straight-razor lineups first, clippers second — which is why the beard work holds up as long as the haircut does.",
     img: barber01,
   },
   {
-    name: "Add Stylist Name",
     role: "Locs & Braids Specialist",
     bio: "Treats every head of locs like a long-term project instead of a one-off appointment — tracking growth, adjusting the retwist schedule, and never rushing a parting just to finish faster.",
     img: cut03,
   },
   {
-    name: "Add Therapist Name",
     role: "Spa & Nail Technician",
     bio: "Runs the pedicure and facial side of the shop with the kind of patience that turns a quick manicure into the most relaxing twenty minutes of a client's week.",
     img: gallery02,
@@ -49,20 +46,15 @@ const team = [
       {team.map((member) => (
         <div class="overflow-hidden rounded-2xl border border-gold-800/30 bg-graphite">
           <div class="aspect-[4/5] overflow-hidden">
-            <Image src={member.img} alt={member.name} width={600} height={750} class="h-full w-full object-cover" />
+            <Image src={member.img} alt={member.role} width={600} height={750} class="h-full w-full object-cover" />
           </div>
           <div class="p-6">
-            <h3 class="font-display text-lg text-cream">{member.name}</h3>
-            <p class="mt-1 text-sm text-gold-400">{member.role}</p>
+            <h3 class="font-display text-lg text-gold-400">{member.role}</h3>
             <p class="mt-3 text-sm leading-relaxed text-cream/60">{member.bio}</p>
           </div>
         </div>
       ))}
     </div>
-
-    <p class="mx-auto mt-10 max-w-lg text-center text-xs text-cream/40">
-      Team names &amp; bios coming soon — photos and roles above are from real Blispa client sessions.
-    </p>
   </section>
 
   <!-- What it's like to train here -->
