@@ -1,0 +1,179 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Price List, Nairobi CBD",
+ "description": "Blispa price list, Nairobi CBD. Haircut KSh 1,000, beard razor KSh 700, full facial KSh 2,500, full pedicure KSh 2,500 and deep tissue massage KSh 4,500.",
+ "kicker": "Price list",
+ "h1": "Blispa Price List,",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Want to know the price before you sit down? Here it is.",
+ "intro": "These are Blispa's current prices for the most booked services. For a style not listed, send a photo on WhatsApp and we quote it.",
+ "imageAlt": "Reception at Blispa Barbershop and Spa Nairobi",
+ "serviceName": "Barbershop and spa prices in Nairobi",
+ "priceLow": 400,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Crazy cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Ladies fresh cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Fresh cut and colour",
+   "time": "60 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Plain texturizer",
+   "time": "45 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard cut",
+   "time": "30 min",
+   "price": "KSh 500"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Beard dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Scrub and mask",
+   "time": "60 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  },
+  {
+   "name": "Coffee body scrub",
+   "time": "80 min",
+   "price": "KSh 4,000"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Armpit waxing",
+   "time": "15 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Full Brazilian waxing",
+   "time": "45 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Nail cut",
+   "time": "15 min",
+   "price": "KSh 400"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Why show prices?",
+   "paras": [
+    "Because people want to know before they come. A clear price means no surprises when you sit down."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a haircut at Blispa Barbershop?",
+   "a": "A plain haircut is KSh 1,000."
+  },
+  {
+   "q": "How much is a full body massage in Nairobi CBD at Blispa?",
+   "a": "A 60 minute full body massage is KSh 3,500."
+  },
+  {
+   "q": "How much is a pedicure at Blispa?",
+   "a": "A full pedicure is KSh 2,500."
+  },
+  {
+   "q": "How do I pay?",
+   "a": "Ask on WhatsApp or at the front desk for the payment options."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  }
+ ],
+ "waText": "Hi Blispa, I have a question about prices."
+};
+---
+
+<ServicePage {...data} image={image} />

@@ -1,0 +1,103 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/pedicure-01.jpg";
+const data = {
+ "title": "Pedicure & Manicure Nairobi CBD",
+ "description": "Pedicure and manicure for men and women in Nairobi CBD at Blispa, Kenyatta Avenue. Full pedicure KSh 2,500, full manicure KSh 1,500. Book on WhatsApp.",
+ "kicker": "Hands and feet",
+ "h1": "Pedicure & Manicure in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "When did your feet last get a day off?",
+ "intro": "Warm soak, real pedicure chairs and nails done properly. Blispa does hands and feet for men and women, on the same floor as the barbershop.",
+ "imageAlt": "Pedicure chair at Blispa Barbershop and Spa Nairobi",
+ "serviceName": "Pedicure and manicure in Nairobi CBD",
+ "priceLow": 400,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Manicure",
+   "time": "from 25 min",
+   "price": "from KSh 700"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Pedicure",
+   "time": "from 30 min",
+   "price": "from KSh 1,500"
+  },
+  {
+   "name": "Pedicure",
+   "time": "60 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Nail cut",
+   "time": "15 min",
+   "price": "KSh 400"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Pedicures for men too",
+   "paras": [
+    "A big share of Blispa's spa clients are men. A pedicure is just good grooming, like a haircut. Nobody blinks."
+   ]
+  },
+  {
+   "h2": "What a full pedicure includes",
+   "paras": [
+    "A warm soak, callus care, a scrub and a clean finish. It takes about an hour. The full manicure does the same for the hands."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a pedicure in Nairobi CBD at Blispa?",
+   "a": "Pedicures start from KSh 1,500. A full pedicure with callus care and scrub is KSh 2,500."
+  },
+  {
+   "q": "Do men get pedicures at Blispa?",
+   "a": "Yes, many of the spa clients are men."
+  },
+  {
+   "q": "Can I get a pedicure while I wait for a haircut?",
+   "a": "Ask on WhatsApp. When a therapist is free, we line both up so you save time."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a pedicure."
+};
+---
+
+<ServicePage {...data} image={image} />

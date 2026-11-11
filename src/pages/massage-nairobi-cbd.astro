@@ -1,0 +1,114 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/video-posters/hands-massage.jpg";
+const data = {
+ "title": "Massage in Nairobi CBD",
+ "description": "Full body and deep tissue massage in Nairobi CBD at Blispa Spa, Kenyatta Avenue. Back massage KSh 2,000, full body KSh 3,500, deep tissue KSh 4,500.",
+ "kicker": "Spa on Kenyatta Avenue",
+ "h1": "Massage in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Carrying the whole week in your shoulders?",
+ "intro": "Blispa's spa is on the same floor as the barbershop, in Superior Centre. Trained therapists, a quiet room and prices you can see before you book.",
+ "imageAlt": "Massage therapist at Blispa Spa in Nairobi CBD",
+ "serviceName": "Massage in Nairobi CBD",
+ "priceLow": 2000,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Body massage",
+   "time": "30 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  },
+  {
+   "name": "Body scrub",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Coffee body scrub",
+   "time": "80 min",
+   "price": "KSh 4,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Full body or deep tissue?",
+   "paras": [
+    "Full body massage uses relaxing pressure. It is the one to book after a long week.",
+    "Deep tissue is slower and firmer. It reaches knots a normal massage does not. Tell your therapist where it hurts."
+   ]
+  },
+  {
+   "h2": "A professional spa in town",
+   "paras": [
+    "Blispa is a barbershop and spa, open to men and women. Massage happens in a private room by trained therapists. Nothing else is offered."
+   ]
+  },
+  {
+   "h2": "Add a scrub",
+   "paras": [
+    "A body scrub before or after the massage leaves the skin soft the same day. The coffee body scrub is the long version at 80 minutes."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a massage in Nairobi CBD at Blispa?",
+   "a": "A back massage is KSh 2,000, a 60 minute full body massage is KSh 3,500 and an 80 minute deep tissue massage is KSh 4,500."
+  },
+  {
+   "q": "Is the massage for men and women?",
+   "a": "Yes. Both men and women book massage at Blispa."
+  },
+  {
+   "q": "Can I book a massage after work?",
+   "a": "Yes. Send a WhatsApp message with the time you want and we confirm it."
+  },
+  {
+   "q": "Do you do couples massage?",
+   "a": "Yes, ask on WhatsApp and we set up two therapists at the same time."
+  }
+ ],
+ "related": [
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a massage."
+};
+---
+
+<ServicePage {...data} image={image} />
