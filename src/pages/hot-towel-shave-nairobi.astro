@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/gallery/shave-02.jpg";
+import g0 from "../assets/gallery/beard-01.jpg";
+import g1 from "../assets/gallery/barber-01.jpg";
+import g2 from "../assets/gallery/fade-04.jpg";
 const data = {
  "title": "Hot Towel Shave in Nairobi",
  "description": "Hot towel shave and straight razor beard lineups at Blispa, Nairobi CBD. Beard razor KSh 700, beard cut KSh 500, beard dye KSh 1,000. Book on WhatsApp.",
@@ -101,4 +104,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

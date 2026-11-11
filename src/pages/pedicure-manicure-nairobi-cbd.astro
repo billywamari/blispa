@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/gallery/pedicure-01.jpg";
+import g0 from "../assets/gallery/gallery-02.jpg";
+import g1 from "../assets/gallery/gallery-08.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
 const data = {
  "title": "Pedicure & Manicure Nairobi CBD",
  "description": "Pedicure and manicure for men and women in Nairobi CBD at Blispa, Kenyatta Avenue. Full pedicure KSh 2,500, full manicure KSh 1,500. Book on WhatsApp.",
@@ -100,4 +103,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

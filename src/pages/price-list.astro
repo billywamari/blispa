@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/shave-02.jpg";
+import g2 from "../assets/gallery/pedicure-01.jpg";
 const data = {
  "title": "Price List, Nairobi CBD",
  "description": "Blispa price list, Nairobi CBD. Haircut KSh 1,000, beard razor KSh 700, full facial KSh 2,500, full pedicure KSh 2,500 and deep tissue massage KSh 4,500.",
@@ -176,4 +179,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

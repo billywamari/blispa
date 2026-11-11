@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/video-posters/hands-massage.jpg";
+import g0 from "../assets/gallery/interior-02.jpg";
+import g1 from "../assets/gallery/gallery-06.jpg";
+import g2 from "../assets/gallery/gallery-07.jpg";
 const data = {
  "title": "Massage in Nairobi CBD",
  "description": "Full body and deep tissue massage in Nairobi CBD at Blispa Spa, Kenyatta Avenue. Back massage KSh 2,000, full body KSh 3,500, deep tissue KSh 4,500.",
@@ -111,4 +114,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

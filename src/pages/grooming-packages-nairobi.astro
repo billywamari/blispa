@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/fade-03.jpg";
+import g1 from "../assets/gallery/pedicure-01.jpg";
+import g2 from "../assets/gallery/gallery-11.jpg";
 const data = {
  "title": "Grooming Packages in Nairobi",
  "description": "Grooming and spa packages at Blispa Nairobi CBD: Executive Reset, Full Blispa Day, Couples Unwind, Groom and Squad. Book on WhatsApp.",
@@ -90,4 +93,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

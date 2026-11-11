@@ -1,0 +1,67 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/cut-03.jpg";
+import g0 from "../assets/gallery/cut-01.jpg";
+import g1 from "../assets/gallery/fade-03.jpg";
+import g2 from "../assets/gallery/gallery-04.jpg";
+const data = {
+ "title": "Kids Haircut in Nairobi CBD",
+ "description": "Kids haircuts in Nairobi CBD at Blispa. Patient barbers, clean tools, a calm chair. Father and son cuts side by side. Send a WhatsApp for the price.",
+ "kicker": "For the little ones",
+ "h1": "Kids Haircut in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Does your child dread the barber chair?",
+ "intro": "Blispa barbers take their time with kids, including the ones who do not sit still. Clean tools, no rushing, no tears.",
+ "imageAlt": "Kids haircut at Blispa Barbershop Nairobi",
+ "serviceName": "Kids haircut in Nairobi CBD",
+ "blocks": [
+  {
+   "h2": "Father and son",
+   "paras": [
+    "Book two chairs side by side. Dad gets a hot towel. The kid gets a fresh cut for school."
+   ]
+  },
+  {
+   "h2": "Weekends and school holidays",
+   "paras": [
+    "These fill up fast. Message on WhatsApp a day before and we hold the chairs."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you cut kids' hair at Blispa?",
+   "a": "Yes. Kids haircuts are done by patient barbers at Superior Centre, Kenyatta Avenue."
+  },
+  {
+   "q": "How much is a kids haircut?",
+   "a": "Send a WhatsApp with the child's age and the style. We confirm the price before you come."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a kids haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

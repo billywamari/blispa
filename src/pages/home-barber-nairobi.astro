@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/gallery/barber-01.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/beard-01.jpg";
+import g2 from "../assets/gallery/cut-03.jpg";
 const data = {
  "title": "Home & Office Barber Nairobi",
  "description": "Blispa barbers and therapists come to your home, office or hotel in Nairobi. Haircuts, shaves, pedicures and massage. WhatsApp your location for a quote.",
@@ -81,4 +84,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

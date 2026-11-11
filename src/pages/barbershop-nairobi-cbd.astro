@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/gallery/fade-02.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/barber-02.jpg";
+import g2 from "../assets/gallery/cut-02.jpg";
 const data = {
  "title": "Executive Barbershop Nairobi CBD",
  "description": "Executive barbershop on Kenyatta Avenue, Nairobi CBD. Fades, razor cuts, beard work and a spa on the same floor. Haircuts from KSh 1,000. WhatsApp to book.",
@@ -131,4 +134,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

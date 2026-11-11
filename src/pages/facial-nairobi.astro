@@ -1,6 +1,9 @@
 ---
 import ServicePage from "../components/ServicePage.astro";
 import image from "../assets/video-posters/facial-selfcare.jpg";
+import g0 from "../assets/gallery/gallery-05.jpg";
+import g1 from "../assets/gallery/gallery-09.jpg";
+import g2 from "../assets/gallery/interior-02.jpg";
 const data = {
  "title": "Facials in Nairobi CBD",
  "description": "Facials in Nairobi CBD at Blispa Spa. Full facial KSh 2,500, steaming KSh 1,000, scrub and mask KSh 1,500. For men and women. Book on WhatsApp.",
@@ -86,4 +89,4 @@ const data = {
 };
 ---
 
-<ServicePage {...data} image={image} />
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

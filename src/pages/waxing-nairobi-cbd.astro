@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-02.jpg";
+import g0 from "../assets/gallery/pedicure-01.jpg";
+import g1 from "../assets/gallery/interior-01.jpg";
+import g2 from "../assets/gallery/gallery-05.jpg";
+const data = {
+ "title": "Waxing in Nairobi CBD",
+ "description": "Waxing in Nairobi CBD at Blispa Spa. Armpit KSh 1,500, Brazilian KSh 2,500, bikini KSh 2,500, Manzilian KSh 2,500. Private room, discreet. Book on WhatsApp.",
+ "kicker": "Waxing",
+ "h1": "Waxing in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Smooth skin without the shaving bumps?",
+ "intro": "Blispa does waxing for men and women in a private room. Quick, discreet and done properly.",
+ "imageAlt": "Spa therapist at Blispa Spa Nairobi",
+ "serviceName": "Waxing in Nairobi CBD",
+ "priceLow": 1500,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Armpit waxing",
+   "time": "15 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Bikini waxing",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full Brazilian waxing",
+   "time": "45 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Manzilian waxing (men)",
+   "time": "45 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Private and professional",
+   "paras": [
+    "Waxing happens in a private room with a trained therapist. Tell us your skin type and any sensitivity before we start."
+   ]
+  },
+  {
+   "h2": "Waxing for men",
+   "paras": [
+    "The Manzilian is the men's version of the Brazilian. Book it quietly on WhatsApp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a Brazilian wax in Nairobi at Blispa?",
+   "a": "A full Brazilian wax is KSh 2,500."
+  },
+  {
+   "q": "Do you wax men?",
+   "a": "Yes. The Manzilian and armpit waxing are popular with men."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book waxing."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
