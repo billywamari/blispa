@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/barber-01.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/beard-01.jpg";
+import g2 from "../assets/gallery/cut-03.jpg";
+const data = {
+ "title": "Home & Office Barber Nairobi",
+ "description": "Blispa barbers and therapists come to your home, office or hotel in Nairobi. Haircuts, shaves, pedicures and massage. WhatsApp your location for a quote.",
+ "kicker": "We come to you",
+ "h1": "Home & Office Barber in",
+ "h1Gold": "Nairobi",
+ "hook": "No time to come to town? Blispa comes to you.",
+ "intro": "Blispa sends a barber or therapist to your home, office or hotel room. Same tools, same standard as the shop on Kenyatta Avenue.",
+ "imageAlt": "Blispa barber ready for a home visit in Nairobi",
+ "serviceName": "Home and office barber in Nairobi",
+ "blocks": [
+  {
+   "h2": "Who books a home visit?",
+   "paras": [
+    "Busy professionals who cannot leave the office. Visitors in hotels who need a shave before a meeting. Parents who want the kids cut at home. Wedding parties getting ready together."
+   ]
+  },
+  {
+   "h2": "What we can do at your place",
+   "paras": [
+    "Haircuts, beard and razor work, manicure, pedicure and massage. Tell us what you need and how many people. We send the right team."
+   ]
+  },
+  {
+   "h2": "How it works",
+   "paras": [
+    "Send your location, the services and the time on WhatsApp. We confirm the price, which depends on distance and services. A barber arrives with clean tools and towels."
+   ]
+  },
+  {
+   "h2": "Office grooming days",
+   "paras": [
+    "Companies book Blispa to groom a whole team at the office. One invoice, no time lost in traffic."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does Blispa do home service in Nairobi?",
+   "a": "Yes. Barbers and therapists visit homes, offices and hotels in Nairobi. Send your location on WhatsApp for a quote."
+  },
+  {
+   "q": "How much is a home barber visit?",
+   "a": "It depends on distance and the services you want. WhatsApp your location and we confirm the price before we come."
+  },
+  {
+   "q": "Can you groom a wedding party at the venue?",
+   "a": "Yes. Tell us the number of people and the time. We plan the team."
+  },
+  {
+   "q": "Do you come to hotels?",
+   "a": "Yes. Many visitors to Nairobi book a shave or haircut in their hotel room."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like a barber to come to me. My location is:"
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

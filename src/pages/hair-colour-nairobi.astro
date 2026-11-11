@@ -1,0 +1,97 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/video-posters/bold-color.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/cut-02.jpg";
+import g2 from "../assets/gallery/gallery-03.jpg";
+const data = {
+ "title": "Hair Colour & Dye in Nairobi CBD",
+ "description": "Hair colour, dye and grey cover in Nairobi CBD at Blispa. Plain dye KSh 1,000, half colour KSh 2,000, fresh cut and colour KSh 3,000. Book on WhatsApp.",
+ "kicker": "Colour",
+ "h1": "Hair Colour & Dye in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Ready to go bold, or just ready to hide the grey?",
+ "intro": "From blonde to jet black, Blispa colours hair for men and women. The colour is matched to your skin so it grows out looking planned.",
+ "imageAlt": "Bold hair colour done at Blispa Nairobi",
+ "serviceName": "Hair colour in Nairobi CBD",
+ "priceLow": 1000,
+ "priceHigh": 3000,
+ "prices": [
+  {
+   "name": "Plain dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Half colour",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Fresh cut and colour",
+   "time": "60 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Ladies haircut and colour",
+   "time": "60 min",
+   "price": "KSh 3,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Covering grey",
+   "paras": [
+    "A plain dye covers grey evenly. Beard dye blends the beard to match, done slowly so it never looks painted on."
+   ]
+  },
+  {
+   "h2": "Going bold",
+   "paras": [
+    "Blonde, colour on a fade or a full change. Send a picture of the look you want and we tell you what it takes."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is hair dye in Nairobi at Blispa?",
+   "a": "A plain dye is KSh 1,000. Half colour is KSh 2,000. A fresh cut with colour is KSh 3,000."
+  },
+  {
+   "q": "Do you colour women's hair?",
+   "a": "Yes. Ladies haircut and colour is KSh 3,000."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/locs-nairobi-cbd/",
+   "label": "Locs and retwists"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a hair colour."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

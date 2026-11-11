@@ -1,0 +1,137 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-02.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/barber-02.jpg";
+import g2 from "../assets/gallery/cut-02.jpg";
+const data = {
+ "title": "Executive Barbershop Nairobi CBD",
+ "description": "Executive barbershop on Kenyatta Avenue, Nairobi CBD. Fades, razor cuts, beard work and a spa on the same floor. Haircuts from KSh 1,000. WhatsApp to book.",
+ "kicker": "Kenyatta Avenue, Nairobi CBD",
+ "h1": "Executive Barbershop in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Got a meeting at 9 and a beard that says weekend?",
+ "intro": "Blispa Barbershop & Spa sits on the 4th floor of Superior Centre, right in the CBD. Barbers cut in stages and check the line before you leave. The spa is on the same floor, so a cut can turn into a full reset.",
+ "imageAlt": "Fresh skin fade at Blispa Barbershop in Nairobi CBD",
+ "serviceName": "Barbershop in Nairobi CBD",
+ "priceLow": 500,
+ "priceHigh": 3000,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Crazy cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Beard cut",
+   "time": "30 min",
+   "price": "KSh 500"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Beard dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Plain dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Fresh cut and colour",
+   "time": "60 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Ladies fresh cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What makes it an executive barbershop?",
+   "paras": [
+    "Time. Nobody rushes your fade to fit the next client in. Your barber talks to you first, then cuts in stages and checks the line from more than one angle.",
+    "You sit in wide chairs under gold lit mirrors. Tools are cleaned between clients. Coffee or juice is there while you wait."
+   ]
+  },
+  {
+   "h2": "Who comes to Blispa?",
+   "paras": [
+    "Professionals working in the CBD, people in town for a meeting, visitors staying in nearby hotels and Kenyan creators who want to look sharp on camera.",
+    "Many book the same barber every few weeks, because that barber already knows how they like their edges."
+   ]
+  },
+  {
+   "h2": "Where to find us",
+   "paras": [
+    "Superior Centre, 4th Floor, Room K1, Kenyatta Avenue, near the Moi Avenue junction. Take the lift to the 4th floor. Call 0746 200 969 if you get lost and someone comes to meet you."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a haircut at Blispa?",
+   "a": "A plain haircut is KSh 1,000. A razor cut is KSh 1,200. A beard razor finish is KSh 700. Send a photo on WhatsApp for an exact price on bigger styles."
+  },
+  {
+   "q": "Do I need to book?",
+   "a": "Walk ins are welcome. Booking on WhatsApp or online holds a chair, which helps at lunch hour and on Saturdays."
+  },
+  {
+   "q": "Where is Blispa in the CBD?",
+   "a": "Superior Centre, 4th Floor, Room K1, Kenyatta Avenue, Nairobi."
+  },
+  {
+   "q": "Can I get a pedicure or massage on the same visit?",
+   "a": "Yes. The spa is on the same floor, so you can add a pedicure, facial or massage to your cut."
+  }
+ ],
+ "related": [
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

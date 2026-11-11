@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/fade-03.jpg";
+import g1 from "../assets/gallery/pedicure-01.jpg";
+import g2 from "../assets/gallery/gallery-11.jpg";
+const data = {
+ "title": "Grooming Packages in Nairobi",
+ "description": "Grooming and spa packages at Blispa Nairobi CBD: Executive Reset, Full Blispa Day, Couples Unwind, Groom and Squad. Book on WhatsApp.",
+ "kicker": "Packages",
+ "h1": "Grooming & Spa Packages in",
+ "h1Gold": "Nairobi",
+ "hook": "Why book one thing when the whole afternoon can be sorted?",
+ "intro": "The barbershop and spa share one floor, so packages are easy. Prices below are today's menu prices added up. Ask on WhatsApp for the package price.",
+ "imageAlt": "Inside Blispa Barbershop and Spa in Nairobi",
+ "serviceName": "Grooming and spa packages in Nairobi",
+ "priceLow": 4200,
+ "priceHigh": 12700,
+ "prices": [
+  {
+   "name": "Executive Reset: haircut, beard razor, full facial",
+   "price": "KSh 4,200 at menu prices"
+  },
+  {
+   "name": "Ladies Glow: fresh cut, full facial, full pedicure, full manicure",
+   "price": "KSh 8,000 at menu prices"
+  },
+  {
+   "name": "Couples Unwind: two full body massages, two full pedicures",
+   "price": "KSh 12,000 at menu prices"
+  },
+  {
+   "name": "Groom and Squad: five haircuts and beard razors, groom facial",
+   "price": "KSh 11,000 at menu prices"
+  },
+  {
+   "name": "Full Blispa Day: haircut, beard razor, facial, deep tissue massage, full pedicure, full manicure",
+   "price": "KSh 12,700 at menu prices"
+  }
+ ],
+ "priceNote": "Package prices are confirmed on WhatsApp. The figures above are the individual menu prices added together.",
+ "blocks": [
+  {
+   "h2": "Packages for big days",
+   "paras": [
+    "Weddings, birthdays, graduations and job interviews. Groom and Squad can be done at the shop or at the venue."
+   ]
+  },
+  {
+   "h2": "Gift a package",
+   "paras": [
+    "Any package can be a gift. Send the name of the person on WhatsApp and we arrange it."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What is the best grooming package at Blispa?",
+   "a": "The Executive Reset (haircut, beard razor and facial) is the quick favourite. The Full Blispa Day is the complete treat."
+  },
+  {
+   "q": "Do you have couples packages in Nairobi?",
+   "a": "Yes. Couples Unwind is two full body massages and two full pedicures."
+  },
+  {
+   "q": "Can I buy a package as a gift?",
+   "a": "Yes. Message us on WhatsApp with the name and we set it up."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to ask about a package."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

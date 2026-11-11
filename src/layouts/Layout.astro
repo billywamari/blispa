@@ -3,16 +3,62 @@ import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import FullscreenVideoViewer from "../components/FullscreenVideoViewer.astro";
+import { getImage } from "astro:assets";
+import shareImage from "../assets/gallery/interior-01.jpg";
 
 interface Props {
   title: string;
   description?: string;
 }
 
+const SITE = "https://www.blispabarbershop.co.ke";
+
 const {
   title,
   description = "Blispa Barbershop & Spa — grooming, spa and self-care in the heart of Nairobi. Styling, locs, shaves, massages, facials, manicures & pedicures.",
 } = Astro.props;
+
+const fullTitle =
+  title === "Home"
+    ? "Executive Barbershop & Spa in Nairobi CBD | Blispa Barbershop & Spa"
+    : `${title} | Blispa Barbershop & Spa`;
+
+const path = Astro.url.pathname.replace(/\/+$/, "/");
+const canonical = new URL(path === "" ? "/" : path, SITE).href;
+
+const og = await getImage({ src: shareImage, width: 1200, format: "jpg" });
+const ogUrl = new URL(og.src, SITE).href;
+
+const business = {
+  "@context": "https://schema.org",
+  "@type": ["BarberShop", "DaySpa"],
+  "@id": `${SITE}/#business`,
+  name: "Blispa Barbershop & Spa",
+  url: `${SITE}/`,
+  image: ogUrl,
+  logo: ogUrl,
+  telephone: "+254746200969",
+  priceRange: "KSh 400 to KSh 4,500",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Superior Centre, 4th Floor, Room K1, Kenyatta Avenue",
+    addressLocality: "Nairobi",
+    postalCode: "00100",
+    addressCountry: "KE",
+  },
+  areaServed: "Nairobi",
+  sameAs: [
+    "https://www.instagram.com/blispabarbershopandspa/",
+    "https://www.tiktok.com/@blispabarbershops",
+    "https://www.facebook.com/profile.php?id=61572274967267",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+254746200969",
+    contactType: "customer service",
+    availableLanguage: ["English", "Swahili"],
+  },
+};
 ---
 
 <!doctype html>
@@ -25,7 +71,22 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <title>{title} | Blispa Barbershop & Spa</title>
+    <title>{fullTitle}</title>
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Blispa Barbershop & Spa" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:locale" content="en_KE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(business)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,6 +104,14 @@ const {
       }
       gtag("js", new Date());
       gtag("config", "G-P3VLQKZX19");
+      gtag("config", "G-7JRVB7FJRL");
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a[href]");
+        if (!a) return;
+        var h = a.getAttribute("href") || "";
+        var ev = h.indexOf("wa.me") > -1 ? "whatsapp_click" : h.indexOf("tel:") === 0 ? "phone_call_click" : h.indexOf("mailto:") === 0 ? "email_click" : h.indexOf("podium.co.ke") > -1 ? "booking_click" : null;
+        if (ev) gtag("event", ev, { link_url: h, page_path: location.pathname });
+      });
     </script>
   </head>
   <body class="min-h-screen bg-ink text-cream antialiased">

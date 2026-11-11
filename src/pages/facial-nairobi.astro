@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/video-posters/facial-selfcare.jpg";
+import g0 from "../assets/gallery/gallery-05.jpg";
+import g1 from "../assets/gallery/gallery-09.jpg";
+import g2 from "../assets/gallery/interior-02.jpg";
+const data = {
+ "title": "Facials in Nairobi CBD",
+ "description": "Facials in Nairobi CBD at Blispa Spa. Full facial KSh 2,500, steaming KSh 1,000, scrub and mask KSh 1,500. For men and women. Book on WhatsApp.",
+ "kicker": "Skin care",
+ "h1": "Facials in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Is the city dust showing on your skin?",
+ "intro": "A Blispa facial cleans first, then steams, scrubs and treats. Men and women book it on its own or after a haircut.",
+ "imageAlt": "Facial treatment at Blispa Spa Nairobi",
+ "serviceName": "Facials in Nairobi CBD",
+ "priceLow": 1000,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Scrub and mask",
+   "time": "60 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Scrub and steaming",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A facial for men",
+   "paras": [
+    "Shaving, sun and traffic smoke are hard on the skin. A facial after a beard razor calms the skin and clears the pores."
+   ]
+  },
+  {
+   "h2": "Before a big day",
+   "paras": [
+    "Weddings, interviews, photo shoots. Book the facial a day or two before so the skin settles and looks its best."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a facial in Nairobi at Blispa?",
+   "a": "A full facial is KSh 2,500. Steaming alone is KSh 1,000 and scrub with mask is KSh 1,500."
+  },
+  {
+   "q": "Are facials only for women?",
+   "a": "No. Many men book a facial with their haircut or shave."
+  }
+ ],
+ "related": [
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a facial."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

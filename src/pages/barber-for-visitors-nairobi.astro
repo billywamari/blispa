@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/barber-01.jpg";
+import g1 from "../assets/gallery/beard-01.jpg";
+import g2 from "../assets/gallery/fade-04.jpg";
+const data = {
+ "title": "Barber for Visitors to Nairobi",
+ "description": "In Nairobi for business or holiday? Blispa is an executive barbershop and spa on Kenyatta Avenue, CBD. Walk in, book on WhatsApp, or we come to your hotel.",
+ "kicker": "Visiting Nairobi?",
+ "h1": "A Barber You Can Trust in",
+ "h1Gold": "Nairobi",
+ "hook": "Landed in Nairobi and need a proper shave before your meeting?",
+ "intro": "Blispa is a clean, calm barbershop and spa in the CBD, close to the city hotels. Visitors to Nairobi find Blispa on Google when they need a shave before a meeting.",
+ "imageAlt": "Clean modern barbershop interior at Blispa Nairobi",
+ "serviceName": "Barber for visitors to Nairobi",
+ "priceLow": 500,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Easy to find, easy to pay",
+   "paras": [
+    "Superior Centre, 4th Floor, Room K1, Kenyatta Avenue. Ask at the front desk about payment options when you book."
+   ]
+  },
+  {
+   "h2": "Or we come to your hotel",
+   "paras": [
+    "Short on time? A Blispa barber can come to your hotel room with clean tools. Send your hotel name on WhatsApp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is there a good barber near the Nairobi CBD hotels?",
+   "a": "Blispa Barbershop & Spa is on Kenyatta Avenue in the CBD and is rated 4.9 on Google."
+  },
+  {
+   "q": "Can a barber come to my hotel in Nairobi?",
+   "a": "Yes. Send your hotel and room details on WhatsApp and we confirm the price and time."
+  },
+  {
+   "q": "Do you speak English?",
+   "a": "Yes. The team speaks English and Swahili."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I'm visiting Nairobi and would like to book."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

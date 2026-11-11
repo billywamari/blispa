@@ -1,0 +1,71 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/locs-01.jpg";
+import g0 from "../assets/gallery/locs-02.jpg";
+import g1 from "../assets/gallery/locs-03.jpg";
+import g2 from "../assets/gallery/locs-04.jpg";
+const data = {
+ "title": "Locs & Retwist in Nairobi CBD",
+ "description": "Locs, retwists and loc styling in Nairobi CBD at Blispa, Kenyatta Avenue. Parted with a comb, never rushed. Send a photo on WhatsApp for your price.",
+ "kicker": "Locs and styling",
+ "h1": "Locs & Retwist in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Are your locs getting the patience they deserve?",
+ "intro": "Locs are a long term project. At Blispa they are parted with a comb, retwisted slowly and tracked from visit to visit.",
+ "imageAlt": "Fresh retwist on locs at Blispa Nairobi CBD",
+ "serviceName": "Locs and retwist in Nairobi CBD",
+ "blocks": [
+  {
+   "h2": "Starter locs to full styles",
+   "paras": [
+    "Starting locs, maintenance retwists, styling for events and repairs. Tell us where your locs are now and what you want next."
+   ]
+  },
+  {
+   "h2": "Why the price is quoted on WhatsApp",
+   "paras": [
+    "Length and thickness change the work a lot. Send a photo and we give you a straight price before you come."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does Blispa do locs in Nairobi CBD?",
+   "a": "Yes. Starter locs, retwists, styling and repairs at Superior Centre, Kenyatta Avenue."
+  },
+  {
+   "q": "How much is a retwist?",
+   "a": "It depends on length and thickness. Send a photo on WhatsApp and we confirm the price."
+  },
+  {
+   "q": "How often should I retwist?",
+   "a": "Most people come every four to six weeks. Your loctician will tell you what suits your hair."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like a price for my locs. Photo attached."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

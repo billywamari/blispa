@@ -3,6 +3,23 @@ import { Image } from "astro:assets";
 import logo from "../assets/brand/logo.jpg";
 
 const year = new Date().getFullYear();
+
+const popular = [
+  { href: "/barbershop-nairobi-cbd/", label: "Barbershop in Nairobi CBD" },
+  { href: "/hot-towel-shave-nairobi/", label: "Hot towel shave" },
+  { href: "/massage-nairobi-cbd/", label: "Massage" },
+  { href: "/pedicure-manicure-nairobi-cbd/", label: "Pedicure and manicure" },
+  { href: "/facial-nairobi/", label: "Facials" },
+  { href: "/home-barber-nairobi/", label: "Home and office visits" },
+  { href: "/grooming-packages-nairobi/", label: "Packages" },
+  { href: "/couples-massage-nairobi/", label: "Couples massage" },
+  { href: "/waxing-nairobi-cbd/", label: "Waxing" },
+  { href: "/locs-nairobi-cbd/", label: "Locs" },
+  { href: "/hair-colour-nairobi/", label: "Hair colour" },
+  { href: "/kids-haircut-nairobi/", label: "Kids haircuts" },
+  { href: "/barber-for-visitors-nairobi/", label: "Visiting Nairobi" },
+  { href: "/price-list/", label: "Price list" },
+];
 ---
 
 <footer class="border-t border-gold-800/40 bg-charcoal">
@@ -44,6 +61,15 @@ const year = new Date().getFullYear();
         Chat on WhatsApp
       </a>
     </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl border-t border-gold-800/30 px-5 py-8">
+    <h3 class="font-display text-sm uppercase tracking-[0.2em] text-gold-400">Popular at Blispa</h3>
+    <ul class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-cream/70">
+      {popular.map((l) => (
+        <li><a href={l.href} class="hover:text-gold-300">{l.label}</a></li>
+      ))}
+    </ul>
   </div>
 
   <div class="border-t border-gold-800/30 px-5 py-5 text-center text-xs text-cream/40">

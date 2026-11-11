@@ -1,0 +1,80 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/video-posters/spa-lounge.jpg";
+import g0 from "../assets/gallery/interior-02.jpg";
+import g1 from "../assets/gallery/pedicure-01.jpg";
+import g2 from "../assets/gallery/gallery-06.jpg";
+const data = {
+ "title": "Couples Massage in Nairobi CBD",
+ "description": "Couples massage in Nairobi CBD at Blispa Spa. Two full body massages side by side, KSh 3,500 each. Add pedicures for a full date. Book on WhatsApp.",
+ "kicker": "For two",
+ "h1": "Couples Massage in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Date night idea that is not another dinner?",
+ "intro": "Two therapists, two full body massages at the same time. Add pedicures and you have the Couples Unwind package.",
+ "imageAlt": "Spa lounge at Blispa Nairobi for couples massage",
+ "serviceName": "Couples massage in Nairobi CBD",
+ "priceLow": 7000,
+ "priceHigh": 12000,
+ "prices": [
+  {
+   "name": "Two full body massages",
+   "time": "60 min",
+   "price": "KSh 7,000"
+  },
+  {
+   "name": "Two deep tissue massages",
+   "time": "80 min",
+   "price": "KSh 9,000"
+  },
+  {
+   "name": "Couples Unwind: two massages and two full pedicures",
+   "price": "KSh 12,000 at menu prices"
+  }
+ ],
+ "priceNote": "Prices are today's menu prices added together. Message us on WhatsApp to book the same time slot for two.",
+ "blocks": [
+  {
+   "h2": "Anniversaries, birthdays and just because",
+   "paras": [
+    "Book it as a gift. Tell us the date and we line up two therapists for the same time."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a couples massage in Nairobi at Blispa?",
+   "a": "Two 60 minute full body massages come to KSh 7,000 at menu prices."
+  },
+  {
+   "q": "Can I book it as a surprise?",
+   "a": "Yes. Message us on WhatsApp with the date and names."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a couples massage."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
