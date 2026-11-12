@@ -11,7 +11,7 @@ interface Props {
   description?: string;
 }
 
-const SITE = "https://www.blispabarbershop.co.ke";
+const SITE = "https://blispabarbershop.co.ke";
 
 const {
   title,
@@ -51,6 +51,21 @@ const business = {
     "https://www.instagram.com/blispabarbershopandspa/",
     "https://www.tiktok.com/@blispabarbershops",
     "https://www.facebook.com/profile.php?id=61572274967267",
+    "https://www.youtube.com/@blispabarber",
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "07:00",
+      closes: "23:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "11:00",
+      closes: "18:00",
+    },
   ],
   contactPoint: {
     "@type": "ContactPoint",
