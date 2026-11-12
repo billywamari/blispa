@@ -32,10 +32,15 @@ interface Props {
 }
 
 const p = Astro.props;
-const SITE = "https://www.blispabarbershop.co.ke";
+const SITE = "https://blispabarbershop.co.ke";
 const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, "/"), SITE).href;
 const wa = `https://wa.me/254746200969?text=${encodeURIComponent(`${p.waText} (from ${pageUrl})`)}`;
 const book = "https://app.podium.co.ke/book/BFRPL1313";
+
+const videos = [
+  { id: "UEgXjl8ZELE", name: "Inside Blispa Barbershop and Spa, Nairobi CBD", description: "A quick look inside Blispa Barbershop and Spa on Kenyatta Avenue, where style meets relaxation.", uploadDate: "2026-11-11T11:29:40-08:00", duration: "PT16S" },
+  { id: "H9Kt2OOJ4QU", name: "A fresh cut at Blispa Barbershop and Spa", description: "A client at Blispa Barbershop and Spa in Nairobi CBD.", uploadDate: "2026-11-11T12:27:32-08:00", duration: "PT19S" },
+];
 
 const schema = {
   "@context": "https://schema.org",
@@ -55,6 +60,16 @@ const schema = {
       "@type": "FAQPage",
       mainEntity: p.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
     },
+    ...videos.map((v) => ({
+      "@type": "VideoObject",
+      name: v.name,
+      description: v.description,
+      thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+      uploadDate: v.uploadDate,
+      duration: v.duration,
+      contentUrl: `https://www.youtube.com/shorts/${v.id}`,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
+    })),
     {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -139,6 +154,40 @@ const schema = {
     </section>
   )}
 
+
+  <section class="mx-auto max-w-6xl px-5 py-10">
+    <h2 class="font-display text-2xl font-semibold text-cream md:text-3xl">Step inside Blispa</h2>
+    <p class="mt-2 text-cream/60">Short clips from the shop. Tap to play.</p>
+    <div class="mt-6 grid grid-cols-2 gap-3 md:max-w-xl">
+      {videos.map((v) => (
+        <div class="relative aspect-[9/16] w-full overflow-hidden rounded-xl border border-gold-800/30 bg-graphite">
+        <button type="button" class="yt-lite group absolute inset-0 h-full w-full" data-id={v.id} aria-label={`Play video: ${v.name}`}>
+          <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={v.name} loading="lazy" decoding="async" width="480" height="360" class="absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-100" />
+          <span class="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-ink/80 ring-2 ring-gold-400/80">
+            <svg viewBox="0 0 24 24" class="ml-1 h-6 w-6 fill-gold-300" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+          </span>
+        </button>
+        </div>
+      ))}
+    </div>
+    <a href="https://www.youtube.com/@blispabarber" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-semibold text-gold-300 underline underline-offset-4">More on the Blispa YouTube channel</a>
+  </section>
+  <script>
+    document.querySelectorAll<HTMLButtonElement>(".yt-lite").forEach((b) => {
+      b.addEventListener("click", () => {
+        const id = b.dataset.id;
+        const f = document.createElement("iframe");
+        f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0`;
+        f.title = b.getAttribute("aria-label") || "Blispa video";
+        f.allow = "autoplay; encrypted-media; picture-in-picture";
+        f.allowFullscreen = true;
+        f.className = "absolute inset-0 h-full w-full";
+        b.parentElement?.replaceChildren(f);
+        if (typeof (window as any).gtag === "function") (window as any).gtag("event", "video_play", { video_id: id });
+      }, { once: true });
+    });
+  </script>
+
   <section class="mx-auto max-w-6xl px-5 py-10">
     <h2 class="font-display text-2xl font-semibold text-cream md:text-3xl">How booking works</h2>
     <ol class="mt-6 grid gap-4 md:grid-cols-3">
@@ -186,6 +235,7 @@ const schema = {
   <section class="mx-auto max-w-6xl px-5 pb-20 text-center">
     <h2 class="font-display text-2xl font-semibold text-cream md:text-3xl">Ready when you are</h2>
     <p class="mx-auto mt-3 max-w-md text-cream/65">Superior Centre, 4th Floor, Room K1, Kenyatta Avenue, Nairobi CBD. Message us and we hold a chair for you.</p>
+    <p class="mx-auto mt-2 max-w-md text-sm text-gold-300">Open Monday to Saturday 7am to 11pm. Sunday 11am to 6pm.</p>
     <a href={wa} target="_blank" rel="noopener noreferrer" class="mt-7 inline-block rounded-full bg-[#1E9E50] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105">Chat on WhatsApp</a>
   </section>
   <div class="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-gold-800/40 bg-ink/95 p-3 backdrop-blur md:hidden">
