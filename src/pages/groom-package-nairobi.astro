@@ -1,0 +1,101 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-03.jpg";
+import g0 from "../assets/gallery/beard-01.jpg";
+import g1 from "../assets/gallery/gallery-05.jpg";
+import g2 from "../assets/gallery/pedicure-01.jpg";
+const data = {
+ "title": "Wedding Groom Package Nairobi",
+ "description": "Grooming for grooms and groomsmen in Nairobi. Haircut, beard, facial, manicure and pedicure at Blispa or at your venue. Ask on WhatsApp.",
+ "kicker": "For the big day",
+ "h1": "Wedding Grooming for Grooms in",
+ "h1Gold": "Nairobi",
+ "hook": "Will your wedding photos show the beard you meant to trim?",
+ "intro": "Your wedding photos last a lifetime. Blispa prepares grooms and groomsmen so everyone looks sharp and matching, in the shop or at the venue.",
+ "imageAlt": "Groom getting ready at Blispa Nairobi",
+ "serviceName": "Wedding groom grooming",
+ "priceLow": 700,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A simple plan",
+   "paras": [
+    "One to two weeks before: facial and pedicure. Two days before: haircut and beard. On the day: a final lineup and touch up."
+   ]
+  },
+  {
+   "h2": "The whole team",
+   "paras": [
+    "Bring the groomsmen in together or ask for barbers to come to the venue. Send the number of people and the date on WhatsApp for a quote."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can Blispa groom the whole wedding party?",
+   "a": "Yes. Send the number of people and the date on WhatsApp for a quote."
+  },
+  {
+   "q": "Can barbers come to the venue?",
+   "a": "Yes. Share the location and time and Blispa confirms."
+  },
+  {
+   "q": "When should the groom get his haircut?",
+   "a": "One or two days before the wedding, with a lineup on the day."
+  }
+ ],
+ "related": [
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/mens-grooming-nairobi/",
+   "label": "Mens grooming"
+  }
+ ],
+ "waText": "Hi Blispa, I am getting married and would like grooming for the wedding."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

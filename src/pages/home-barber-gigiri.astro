@@ -1,0 +1,102 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-02.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/beard-01.jpg";
+import g2 from "../assets/gallery/cut-03.jpg";
+const data = {
+ "title": "Home Barber in Gigiri",
+ "description": "A Blispa barber comes to your home or office in Gigiri with clean tools. Haircuts, beards, pedicures and massage. Send your location on WhatsApp.",
+ "kicker": "Home and office visits",
+ "h1": "A Barber Who Comes to You in",
+ "h1Gold": "Gigiri",
+ "hook": "Stuck at home in Gigiri and your hair will not wait?",
+ "intro": "Blispa sends barbers and therapists from the CBD to Gigiri, covering homes and offices around the UN area and Village Market. You get the same standard as the shop, at your door.",
+ "imageAlt": "Barber home visit from Blispa to Gigiri",
+ "serviceName": "Home barber in Gigiri",
+ "priceLow": 700,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Shop prices shown. Home visits add travel, confirmed on WhatsApp before the visit.",
+ "blocks": [
+  {
+   "h2": "How a home visit works",
+   "paras": [
+    "Send your location in Gigiri, the services you want and a time on WhatsApp. Blispa replies with the price, including travel, before anyone leaves.",
+    "Your barber brings clean tools, a cape and towels. All you need is a chair near good light."
+   ]
+  },
+  {
+   "h2": "Good for",
+   "paras": [
+    "Busy parents, people working from home, clients who prefer privacy and families who want everyone done in one visit."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does Blispa do home visits in Gigiri?",
+   "a": "Yes. Send your location and time on WhatsApp for a quote."
+  },
+  {
+   "q": "How much is a home visit?",
+   "a": "Shop prices plus travel. The total is confirmed on WhatsApp before the visit."
+  },
+  {
+   "q": "Can the whole family get haircuts?",
+   "a": "Yes. Tell Blispa how many people so enough time is set aside."
+  }
+ ],
+ "related": [
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/kids-haircut-nairobi/",
+   "label": "Kids haircuts"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like a home visit in Gigiri."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

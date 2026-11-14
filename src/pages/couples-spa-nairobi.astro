@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/gallery-07.jpg";
+import g2 from "../assets/gallery/gallery-09.jpg";
+const data = {
+ "title": "Couples Spa Day in Nairobi",
+ "description": "Couples spa day in Nairobi CBD. Two full body massages KSh 7,000, two deep tissue KSh 9,000, plus scrubs and facials. Book on WhatsApp.",
+ "kicker": "For two",
+ "h1": "A Couples Spa Day in",
+ "h1Gold": "Nairobi",
+ "hook": "When did you two last do something just for yourselves?",
+ "intro": "Make an afternoon of it at Blispa. Start side by side with a massage, then add a scrub, a facial or a pedicure.",
+ "imageAlt": "Couples treatment room at Blispa Nairobi",
+ "serviceName": "Couples spa day",
+ "priceLow": 2500,
+ "priceHigh": 9000,
+ "prices": [
+  {
+   "name": "Two full body massages",
+   "time": "60 min",
+   "price": "KSh 7,000"
+  },
+  {
+   "name": "Two deep tissue massages",
+   "time": "80 min",
+   "price": "KSh 9,000"
+  },
+  {
+   "name": "Coffee body scrub",
+   "time": "80 min",
+   "price": "KSh 4,000"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A simple plan for two",
+   "paras": [
+    "Two full body massages for KSh 7,000. Add a coffee body scrub or a facial each. Finish with a pedicure."
+   ]
+  },
+  {
+   "h2": "Anniversaries and date nights",
+   "paras": [
+    "Open until 11pm, so it works as an evening date too. Send your preferred time on WhatsApp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a couples spa day at Blispa?",
+   "a": "Two full body massages are KSh 7,000. Two deep tissue massages are KSh 9,000."
+  },
+  {
+   "q": "Can we be in the same room?",
+   "a": "Ask on WhatsApp and Blispa confirms what is available for your time."
+  },
+  {
+   "q": "Can we come in the evening?",
+   "a": "Yes. The spa is open until 11pm from Monday to Saturday."
+  }
+ ],
+ "related": [
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/spa-packages-nairobi/",
+   "label": "Spa packages"
+  },
+  {
+   "href": "/spa-gift-nairobi/",
+   "label": "Spa gift"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  }
+ ],
+ "waText": "Hi Blispa, we would like to book a couples spa day."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

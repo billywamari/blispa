@@ -1,0 +1,102 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-11.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/gallery-05.jpg";
+import g2 from "../assets/gallery/pedicure-01.jpg";
+const data = {
+ "title": "Head to Toe Grooming Nairobi",
+ "description": "Head to toe grooming in Nairobi CBD: haircut, beard, facial, manicure, pedicure and massage. About KSh 12,700 at Blispa menu prices. Book on WhatsApp.",
+ "kicker": "The full reset",
+ "h1": "Head to Toe Grooming in",
+ "h1Gold": "Nairobi",
+ "hook": "When did you last fix everything in one afternoon?",
+ "intro": "The full Blispa reset covers hair, beard, skin, hands, feet and muscles. One afternoon, one floor, one booking.",
+ "imageAlt": "Full grooming afternoon at Blispa Nairobi",
+ "serviceName": "Head to toe grooming",
+ "priceLow": 700,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What it adds up to",
+   "paras": [
+    "Haircut KSh 1,000, beard razor KSh 700, full facial KSh 2,500, full manicure KSh 1,500, full pedicure KSh 2,500 and deep tissue massage KSh 4,500. That is KSh 12,700 at menu prices."
+   ]
+  },
+  {
+   "h2": "Plan your afternoon",
+   "paras": [
+    "It takes about four to five hours. Book on WhatsApp and the times are lined up so you move from one room to the next."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a full grooming afternoon at Blispa?",
+   "a": "About KSh 12,700 at menu prices for cut, beard, facial, manicure, pedicure and deep tissue massage."
+  },
+  {
+   "q": "How long does it take?",
+   "a": "About four to five hours."
+  },
+  {
+   "q": "Can I drop some treatments?",
+   "a": "Yes. Build your own from the menu."
+  }
+ ],
+ "related": [
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/spa-packages-nairobi/",
+   "label": "Spa packages"
+  },
+  {
+   "href": "/mens-grooming-nairobi/",
+   "label": "Mens grooming"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a head to toe grooming visit."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
