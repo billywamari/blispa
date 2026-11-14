@@ -1,0 +1,86 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/fade-03.jpg";
+import g1 from "../assets/gallery/gallery-02.jpg";
+import g2 from "../assets/gallery/gallery-06.jpg";
+const data = {
+ "title": "Barber and Spa near Moi Avenue",
+ "description": "Barbershop and spa near Moi Avenue, Nairobi CBD. Blispa is on Kenyatta Avenue by the Moi Avenue junction. Cuts, massage, pedicures. Open till 11pm.",
+ "kicker": "Near the junction",
+ "h1": "Barber and Spa near",
+ "h1Gold": "Moi Avenue",
+ "hook": "Shopping on Moi Avenue and need a break from the crowd?",
+ "intro": "Blispa is around the corner from Moi Avenue, on Kenyatta Avenue near the junction. Step off the busy street and up to the 4th floor.",
+ "imageAlt": "Barber and spa near Moi Avenue Nairobi",
+ "serviceName": "Barbershop and spa near Moi Avenue",
+ "priceLow": 700,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A calm stop in a busy street",
+   "paras": [
+    "Get a haircut, a pedicure or a back massage between errands. Book a time on WhatsApp so you do not wait."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is Blispa near Moi Avenue?",
+   "a": "Yes. It is on Kenyatta Avenue near the Moi Avenue junction."
+  },
+  {
+   "q": "What floor is it on?",
+   "a": "4th Floor, Room K1, Superior Centre."
+  },
+  {
+   "q": "Is it open in the evening?",
+   "a": "Until 11pm from Monday to Saturday."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/barbershop-kenyatta-avenue/",
+   "label": "Barbershop on Kenyatta Avenue"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/lunch-hour-grooming-nairobi-cbd/",
+   "label": "Lunch hour grooming"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

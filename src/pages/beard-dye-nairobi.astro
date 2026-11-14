@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/beard-01.jpg";
+import g0 from "../assets/gallery/barber-01.jpg";
+import g1 from "../assets/gallery/shave-02.jpg";
+import g2 from "../assets/gallery/fade-04.jpg";
+const data = {
+ "title": "Beard Dye in Nairobi CBD",
+ "description": "Beard dye at Blispa, Nairobi CBD for KSh 1,000. Covers grey so it looks natural, not painted. Add a beard razor for KSh 700. Book on WhatsApp.",
+ "kicker": "Cover the grey",
+ "h1": "Beard Dye in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Is the grey in your beard adding years you do not feel?",
+ "intro": "Beard dye at Blispa is matched to your natural shade. The aim is a beard that looks like yours, just younger.",
+ "imageAlt": "Dark groomed beard at Blispa Nairobi",
+ "serviceName": "Beard dye",
+ "priceLow": 500,
+ "priceHigh": 1000,
+ "prices": [
+  {
+   "name": "Beard dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Beard cut",
+   "time": "30 min",
+   "price": "KSh 500"
+  },
+  {
+   "name": "Plain dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Natural, not shoe polish",
+   "paras": [
+    "Your barber picks a shade close to your own and keeps it off the skin, so there is no dark stain around the edges."
+   ]
+  },
+  {
+   "h2": "How long it lasts",
+   "paras": [
+    "About three to four weeks, depending on how fast your beard grows. Book a touch up with your trim."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is beard dye at Blispa?",
+   "a": "KSh 1,000 for about 30 minutes."
+  },
+  {
+   "q": "Will it stain my skin?",
+   "a": "Your barber keeps the dye on the hair and cleans the edges."
+  },
+  {
+   "q": "Can I dye my hair too?",
+   "a": "Yes. Plain hair dye is also KSh 1,000."
+  }
+ ],
+ "related": [
+  {
+   "href": "/beard-trim-nairobi/",
+   "label": "Beard trim"
+  },
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/grey-hair-dye-men-nairobi/",
+   "label": "Grey hair dye for men"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a beard dye."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

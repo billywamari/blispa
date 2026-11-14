@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/gallery-07.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Brazilian Wax in Nairobi CBD",
+ "description": "Brazilian waxing in Nairobi CBD at Blispa. Full Brazilian KSh 2,500, bikini KSh 2,500, armpit KSh 1,500. Private room. Book on WhatsApp.",
+ "kicker": "Private and professional",
+ "h1": "Brazilian Wax in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Looking for waxing that is quick, clean and private?",
+ "intro": "Waxing at Blispa happens in a private room with trained therapists. Hair is removed from the root, so skin stays smooth for weeks.",
+ "imageAlt": "Private treatment room at Blispa Nairobi",
+ "serviceName": "Brazilian waxing",
+ "priceLow": 1500,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Full Brazilian waxing",
+   "time": "45 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Bikini waxing",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Armpit waxing",
+   "time": "15 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Before you come",
+   "paras": [
+    "Let the hair grow for about two weeks so the wax can grip. Skip lotion on the day. Wear loose clothes."
+   ]
+  },
+  {
+   "h2": "Aftercare",
+   "paras": [
+    "Avoid the gym, the sauna and tight clothes for a day. A gentle scrub a few days later helps stop ingrown hairs."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a Brazilian wax at Blispa?",
+   "a": "KSh 2,500 for 45 minutes."
+  },
+  {
+   "q": "Does it hurt?",
+   "a": "It stings for a moment. It gets easier with regular visits."
+  },
+  {
+   "q": "Is it private?",
+   "a": "Yes. Waxing is done in a private room."
+  }
+ ],
+ "related": [
+  {
+   "href": "/waxing-nairobi-cbd/",
+   "label": "Waxing"
+  },
+  {
+   "href": "/manzilian-wax-nairobi/",
+   "label": "Waxing for men"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/body-scrub-nairobi/",
+   "label": "Body scrub"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a wax."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

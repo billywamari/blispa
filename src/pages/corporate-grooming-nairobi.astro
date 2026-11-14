@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/barber-02.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/cut-02.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Corporate Grooming in Nairobi",
+ "description": "Corporate grooming days in Nairobi. Blispa barbers and therapists come to your office for haircuts, beards and massage. Ask for a quote on WhatsApp.",
+ "kicker": "For teams and offices",
+ "h1": "Corporate Grooming in",
+ "h1Gold": "Nairobi",
+ "hook": "What would a fresh cut do for team morale on a Friday?",
+ "intro": "Blispa brings barbers and therapists to offices for wellness days, launches and staff treats. Your team gets groomed without leaving the building.",
+ "imageAlt": "Barber grooming a client at Blispa Nairobi",
+ "serviceName": "Corporate grooming",
+ "priceLow": 700,
+ "priceHigh": 2000,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Manicure",
+   "time": "from 25 min",
+   "price": "from KSh 700"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "How it works",
+   "paras": [
+    "Send your office location, the date and how many people on WhatsApp. Blispa replies with a quote and a schedule."
+   ]
+  },
+  {
+   "h2": "Popular for",
+   "paras": [
+    "Staff wellness days, end of month treats, client events and team photo days."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can Blispa come to our office?",
+   "a": "Yes. Send the location, date and number of people for a quote."
+  },
+  {
+   "q": "What services can be done at the office?",
+   "a": "Haircuts, beard work, back and shoulder massage and manicures."
+  },
+  {
+   "q": "Can we bring the team to the shop instead?",
+   "a": "Yes. Book a block of time on WhatsApp."
+  }
+ ],
+ "related": [
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/mens-grooming-nairobi/",
+   "label": "Mens grooming"
+  },
+  {
+   "href": "/photo-shoot-grooming-nairobi/",
+   "label": "Grooming for shoots and content"
+  }
+ ],
+ "waText": "Hi Blispa, I would like a quote for corporate grooming."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

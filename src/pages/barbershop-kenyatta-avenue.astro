@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/barber-02.jpg";
+import g2 from "../assets/gallery/gallery-04.jpg";
+const data = {
+ "title": "Barbershop on Kenyatta Avenue",
+ "description": "Blispa Barbershop & Spa is on Kenyatta Avenue, Nairobi CBD: Superior Centre, 4th Floor, Room K1. How to find it, hours and prices. Book on WhatsApp.",
+ "kicker": "How to find Blispa",
+ "h1": "The Barbershop on",
+ "h1Gold": "Kenyatta Avenue",
+ "hook": "Walking down Kenyatta Avenue and wondering where Blispa is?",
+ "intro": "Blispa is inside Superior Centre on Kenyatta Avenue, near the Moi Avenue junction. Take the lift to the 4th floor and look for Room K1.",
+ "imageAlt": "Blispa Barbershop interior on Kenyatta Avenue",
+ "serviceName": "Barbershop on Kenyatta Avenue",
+ "priceLow": 700,
+ "priceHigh": 2000,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Getting there",
+   "paras": [
+    "Superior Centre is on Kenyatta Avenue in the heart of the CBD. Matatus to town stop within a short walk. Call 0746 200 969 if you get lost and someone comes down to meet you."
+   ]
+  },
+  {
+   "h2": "Hours",
+   "paras": [
+    "Monday to Saturday 7am to 11pm. Sunday 11am to 6pm."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Where exactly is Blispa?",
+   "a": "Superior Centre, 4th Floor, Room K1, Kenyatta Avenue, Nairobi CBD."
+  },
+  {
+   "q": "What are the opening hours?",
+   "a": "Monday to Saturday 7am to 11pm. Sunday 11am to 6pm."
+  },
+  {
+   "q": "What is the phone number?",
+   "a": "0746 200 969, on call and WhatsApp."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  },
+  {
+   "href": "/barber-for-visitors-nairobi/",
+   "label": "For visitors to Nairobi"
+  },
+  {
+   "href": "/late-night-barber-nairobi/",
+   "label": "Late night barber"
+  }
+ ],
+ "waText": "Hi Blispa, I would like directions and a booking."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-02.jpg";
+import g0 from "../assets/gallery/gallery-04.jpg";
+import g1 from "../assets/gallery/gallery-06.jpg";
+import g2 from "../assets/gallery/cut-03.jpg";
+const data = {
+ "title": "Birthday Grooming in Nairobi",
+ "description": "Look your best on your birthday. Haircut, beard, facial and massage at Blispa, Nairobi CBD. Book a birthday visit on WhatsApp.",
+ "kicker": "Your day, your look",
+ "h1": "Birthday Grooming in",
+ "h1Gold": "Nairobi",
+ "hook": "Planning the party but forgetting the person in the photos?",
+ "intro": "Birthdays mean photos, dinners and nights out. Start the day at Blispa with a fresh cut, a clean beard and maybe a massage.",
+ "imageAlt": "Fresh birthday haircut at Blispa Nairobi",
+ "serviceName": "Birthday grooming",
+ "priceLow": 700,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Crazy cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A birthday routine",
+   "paras": [
+    "Morning: haircut and beard razor. Midday: full facial. Evening: dinner looking sharp. Or flip it and start with a massage."
+   ]
+  },
+  {
+   "h2": "Bring friends",
+   "paras": [
+    "Coming with a group? Send the number on WhatsApp so chairs are ready together."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I book for a group of friends?",
+   "a": "Yes. Send the number of people and the time on WhatsApp."
+  },
+  {
+   "q": "What is a crazy cut?",
+   "a": "A creative cut with designs or bold shapes. It costs KSh 1,500."
+  },
+  {
+   "q": "Can I gift a birthday visit?",
+   "a": "Yes. See the spa gift page."
+  }
+ ],
+ "related": [
+  {
+   "href": "/spa-gift-nairobi/",
+   "label": "Spa gift"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book for a birthday."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

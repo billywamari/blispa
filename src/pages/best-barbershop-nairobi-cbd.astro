@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-01.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/beard-01.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Top Rated Barbershop in the CBD",
+ "description": "Blispa is rated 4.9 on Google from over 200 reviews. See why CBD professionals and creators choose it, with prices and hours. Book on WhatsApp.",
+ "kicker": "4.9 on Google",
+ "h1": "A Top Rated Barbershop in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "How do you pick a barber you can trust with your head?",
+ "intro": "Reviews tell the story. Blispa is rated 4.9 on Google from over 200 reviews, with new ones every week.",
+ "imageAlt": "Top rated barbershop Blispa in Nairobi CBD",
+ "serviceName": "Top rated barbershop in Nairobi CBD",
+ "priceLow": 700,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What reviewers mention",
+   "paras": [
+    "Barbers who take their time. Clean tools. A calm room. A spa on the same floor. Staff who remember how you like your cut."
+   ]
+  },
+  {
+   "h2": "Check for yourself",
+   "paras": [
+    "Read the reviews on Google Maps, then book the barber people keep naming."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What is Blispa's Google rating?",
+   "a": "4.9 stars from over 200 Google reviews."
+  },
+  {
+   "q": "Is Blispa expensive?",
+   "a": "A plain haircut is KSh 1,000. See the full price list for everything else."
+  },
+  {
+   "q": "Do I need to book?",
+   "a": "Walk ins are welcome. Booking on WhatsApp holds a chair."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  },
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
