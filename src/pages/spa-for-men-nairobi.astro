@@ -1,0 +1,97 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/gallery-05.jpg";
+import g2 from "../assets/gallery/pedicure-01.jpg";
+const data = {
+ "title": "Spa for Men in Nairobi",
+ "description": "A spa built for men in Nairobi CBD. Massage, facials, pedicures and waxing at Blispa, Kenyatta Avenue. Open till 11pm. Book on WhatsApp.",
+ "kicker": "Built for men",
+ "h1": "A Spa for Men in",
+ "h1Gold": "Nairobi",
+ "hook": "Ever felt out of place in a spa full of scented candles and pink towels?",
+ "intro": "Blispa started as a barbershop, so the spa is built around men. Straight talk, firm massage and treatments that fit a working day.",
+ "imageAlt": "Spa room built for men at Blispa Nairobi",
+ "serviceName": "Spa for men",
+ "priceLow": 2500,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Manzilian waxing (men)",
+   "time": "45 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What men book most",
+   "paras": [
+    "Deep tissue massage for the back. A full facial for skin. A pedicure for tired feet. Many add a haircut on the way out."
+   ]
+  },
+  {
+   "h2": "Late hours for working men",
+   "paras": [
+    "Open until 11pm on weekdays and Saturday, so you can come after work or after the gym."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is there a spa for men in Nairobi?",
+   "a": "Yes. Blispa Barbershop & Spa on Kenyatta Avenue is a barbershop and spa built around men."
+  },
+  {
+   "q": "Can women come too?",
+   "a": "Yes. Blispa welcomes women as well."
+  },
+  {
+   "q": "How late is it open?",
+   "a": "Until 11pm from Monday to Saturday."
+  }
+ ],
+ "related": [
+  {
+   "href": "/mens-grooming-nairobi/",
+   "label": "Mens grooming"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a spa visit."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

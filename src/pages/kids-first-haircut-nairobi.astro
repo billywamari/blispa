@@ -1,0 +1,77 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/cut-01.jpg";
+import g0 from "../assets/gallery/fade-03.jpg";
+import g1 from "../assets/gallery/gallery-04.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Baby's First Haircut Nairobi",
+ "description": "Baby or toddler's first haircut in Nairobi CBD. Patient barbers, calm room, quick cuts at Blispa. Or a barber comes home. Book on WhatsApp.",
+ "kicker": "Little ones",
+ "h1": "Your Child's First Haircut in",
+ "h1Gold": "Nairobi",
+ "hook": "Worried your little one will cry through their first cut?",
+ "intro": "First haircuts go better with patience and a calm room. Blispa barbers take it slow, talk to the child and stop for breaks.",
+ "imageAlt": "Child's first haircut at Blispa Nairobi",
+ "serviceName": "Kids first haircut",
+ "priceLow": 1000,
+ "priceHigh": 1000,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Kids cut prices are confirmed on WhatsApp.",
+ "blocks": [
+  {
+   "h2": "Tips for parents",
+   "paras": [
+    "Come after a nap and a snack. Bring a favourite toy. Sit them on your lap if they are nervous. Keep the first cut simple."
+   ]
+  },
+  {
+   "h2": "Prefer home?",
+   "paras": [
+    "A barber can come to your home, where your child feels safe. Send your location on WhatsApp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you cut babies' hair?",
+   "a": "Yes. Barbers are patient with babies and toddlers."
+  },
+  {
+   "q": "Can I sit with my child?",
+   "a": "Yes. Your child can sit on your lap."
+  },
+  {
+   "q": "Can a barber come home for my child's first cut?",
+   "a": "Yes. Send your location on WhatsApp for a quote."
+  }
+ ],
+ "related": [
+  {
+   "href": "/kids-haircut-nairobi/",
+   "label": "Kids haircuts"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/sunday-barber-nairobi/",
+   "label": "Sunday barber"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book my child's first haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

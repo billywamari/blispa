@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-06.jpg";
+import g0 from "../assets/gallery/interior-02.jpg";
+import g1 from "../assets/gallery/gallery-07.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Back Massage in Nairobi CBD",
+ "description": "Back and shoulder massage in Nairobi CBD for KSh 2,000. 45 minutes at Blispa, Kenyatta Avenue. Good for desk workers. Book on WhatsApp.",
+ "kicker": "Back and shoulders",
+ "h1": "Back Massage in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Is your laptop slowly bending your back?",
+ "intro": "A 45 minute back massage at Blispa targets the upper back, shoulders and neck, where desk work and driving leave their mark.",
+ "imageAlt": "Back massage room at Blispa Nairobi CBD",
+ "serviceName": "Back massage",
+ "priceLow": 2000,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Made for a lunch break",
+   "paras": [
+    "Forty five minutes on the table and you are back at your desk. Book ahead on WhatsApp so the room is ready when you arrive."
+   ]
+  },
+  {
+   "h2": "When to choose deep tissue instead",
+   "paras": [
+    "If the pain has been there for weeks, the 80 minute deep tissue massage gives the therapist time to work into it properly."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a back massage at Blispa?",
+   "a": "KSh 2,000 for 45 minutes."
+  },
+  {
+   "q": "Can I come during lunch?",
+   "a": "Yes. Book a time on WhatsApp so there is no waiting."
+  },
+  {
+   "q": "Is it only for men?",
+   "a": "No. Men and women are welcome."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/deep-tissue-massage-nairobi/",
+   "label": "Deep tissue massage"
+  },
+  {
+   "href": "/lunch-hour-grooming-nairobi-cbd/",
+   "label": "Lunch hour grooming"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a back massage."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

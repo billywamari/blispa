@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-06.jpg";
+import g0 from "../assets/gallery/interior-02.jpg";
+import g1 from "../assets/gallery/gallery-07.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Which Massage Should I Choose",
+ "description": "Back, full body or deep tissue? A simple guide to choosing a massage in Nairobi, with times and prices at Blispa, Nairobi CBD.",
+ "kicker": "Simple guide",
+ "h1": "Which Massage Should",
+ "h1Gold": "You Choose?",
+ "hook": "Not sure which massage your body is asking for?",
+ "intro": "Blispa offers four main massages. Here is how to pick the right one in under a minute.",
+ "imageAlt": "Massage room at Blispa Nairobi",
+ "serviceName": "Massage guide",
+ "priceLow": 2000,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Body massage",
+   "time": "30 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Pick by what you feel",
+   "paras": [
+    "Tight neck and shoulders from the desk: back massage, 45 minutes. Short on time but need to relax: body massage, 30 minutes. Want to switch off completely: full body, 60 minutes. Knots and old pain: deep tissue, 80 minutes."
+   ]
+  },
+  {
+   "h2": "Still not sure?",
+   "paras": [
+    "Tell the therapist how you feel on the day. They adjust the pressure and focus to suit you."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Which massage is best for back pain?",
+   "a": "The back massage or, for older knots, the deep tissue massage."
+  },
+  {
+   "q": "Which massage is best for relaxing?",
+   "a": "The 60 minute full body massage."
+  },
+  {
+   "q": "How often should I get a massage?",
+   "a": "Once a month is a good start. More often if you train hard or sit all day."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/deep-tissue-massage-nairobi/",
+   "label": "Deep tissue massage"
+  },
+  {
+   "href": "/full-body-massage-nairobi/",
+   "label": "Full body massage"
+  },
+  {
+   "href": "/back-massage-nairobi/",
+   "label": "Back massage"
+  }
+ ],
+ "waText": "Hi Blispa, I would like help choosing a massage."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

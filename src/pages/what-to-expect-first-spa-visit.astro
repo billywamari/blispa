@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/interior-02.jpg";
+import g1 from "../assets/gallery/gallery-06.jpg";
+import g2 from "../assets/gallery/gallery-02.jpg";
+const data = {
+ "title": "Your First Spa Visit in Nairobi",
+ "description": "First time at a spa? What happens at Blispa, Nairobi CBD: arrival, privacy, what to wear, tipping and how to book. Simple answers.",
+ "kicker": "First timers welcome",
+ "h1": "Your First Spa Visit at",
+ "h1Gold": "Blispa",
+ "hook": "Never been to a spa and not sure what happens inside?",
+ "intro": "Plenty of Blispa clients had their first massage or pedicure here. This is what the visit looks like from start to finish.",
+ "imageAlt": "Welcoming spa interior at Blispa Nairobi",
+ "serviceName": "First spa visit",
+ "priceLow": 2000,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Step by step",
+   "paras": [
+    "Book on WhatsApp. Arrive five minutes early at the 4th floor. Tell the therapist about any pain or allergies. Relax. Pay at the front desk."
+   ]
+  },
+  {
+   "h2": "Privacy and comfort",
+   "paras": [
+    "Treatments happen in a private room. You get towels and the therapist leaves while you get ready. Say if anything feels uncomfortable."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What should I wear to a spa?",
+   "a": "Anything comfortable. Towels are provided."
+  },
+  {
+   "q": "Can I talk during the massage?",
+   "a": "Yes, or stay quiet. It is your time."
+  },
+  {
+   "q": "Is a first visit more expensive?",
+   "a": "No. Menu prices are the same for everyone."
+  }
+ ],
+ "related": [
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/massage-benefits/",
+   "label": "What a massage does"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  }
+ ],
+ "waText": "Hi Blispa, it's my first spa visit and I would like to book."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

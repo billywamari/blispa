@@ -1,0 +1,97 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/barber-01.jpg";
+import g0 from "../assets/gallery/fade-04.jpg";
+import g1 from "../assets/gallery/gallery-02.jpg";
+import g2 from "../assets/gallery/gallery-06.jpg";
+const data = {
+ "title": "Lunch Hour Haircut Nairobi CBD",
+ "description": "Lunch hour grooming in Nairobi CBD. Haircut in 40 minutes, back massage in 45, manicure from 25. Blispa on Kenyatta Avenue. Book on WhatsApp.",
+ "kicker": "In and out in an hour",
+ "h1": "Lunch Hour Grooming in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Only have an hour between meetings?",
+ "intro": "Blispa is on Kenyatta Avenue, a short walk from most CBD offices. Book your time on WhatsApp and the chair is ready when you walk in.",
+ "imageAlt": "Quick lunch hour haircut at Blispa Nairobi",
+ "serviceName": "Lunch hour grooming",
+ "priceLow": 500,
+ "priceHigh": 2000,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard cut",
+   "time": "30 min",
+   "price": "KSh 500"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Manicure",
+   "time": "from 25 min",
+   "price": "from KSh 700"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What fits in an hour",
+   "paras": [
+    "A plain haircut takes about 40 minutes. A back massage takes 45. A basic manicure starts from 25 minutes. Steaming takes 30."
+   ]
+  },
+  {
+   "h2": "No waiting",
+   "paras": [
+    "Send your time on WhatsApp before you leave the office. That way you sit down straight away."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I get a haircut during lunch?",
+   "a": "Yes. A plain haircut takes about 40 minutes. Book ahead on WhatsApp."
+  },
+  {
+   "q": "Is Blispa near my office?",
+   "a": "Blispa is on Kenyatta Avenue near the Moi Avenue junction, central to the CBD."
+  },
+  {
+   "q": "What else fits in a lunch break?",
+   "a": "A back massage, a manicure or a steam facial."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/back-massage-nairobi/",
+   "label": "Back massage"
+  },
+  {
+   "href": "/steam-facial-nairobi/",
+   "label": "Steam and scrub facial"
+  },
+  {
+   "href": "/manicure-nairobi-cbd/",
+   "label": "Manicure"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a lunch hour slot."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

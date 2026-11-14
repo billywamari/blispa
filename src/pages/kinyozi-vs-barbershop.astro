@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/barber-02.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/interior-01.jpg";
+import g2 from "../assets/gallery/cut-03.jpg";
+const data = {
+ "title": "Kinyozi or Executive Barbershop",
+ "description": "Kinyozi or executive barbershop? What you get for the extra money in Nairobi: time, hygiene, tools and a spa. Blispa prices from KSh 1,000.",
+ "kicker": "Honest comparison",
+ "h1": "Kinyozi or Executive",
+ "h1Gold": "Barbershop?",
+ "hook": "Is the KSh 1,000 cut really better than the KSh 300 one?",
+ "intro": "A local kinyozi gets the job done fast. An executive barbershop sells time, care and a calmer room. Here is the honest difference.",
+ "imageAlt": "Executive barbershop chairs at Blispa Nairobi",
+ "serviceName": "Executive barbershop",
+ "priceLow": 700,
+ "priceHigh": 1200,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What the extra money buys",
+   "paras": [
+    "About 40 minutes in the chair instead of 15. Tools cleaned between clients. A barber who checks the line from every angle. Coffee while you wait."
+   ]
+  },
+  {
+   "h2": "When a kinyozi is fine",
+   "paras": [
+    "For a quick tidy between proper cuts, a nearby kinyozi works. Many clients use both and come to Blispa for the cut that matters."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why does an executive barbershop cost more?",
+   "a": "More time per client, better tools, cleaner rooms and a spa on site."
+  },
+  {
+   "q": "How much is a haircut at Blispa?",
+   "a": "KSh 1,000 for a plain haircut."
+  },
+  {
+   "q": "Is it worth it?",
+   "a": "Most clients say yes for meetings, events and photos."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  },
+  {
+   "href": "/best-barbershop-nairobi-cbd/",
+   "label": "Best rated barbershop"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to try a haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

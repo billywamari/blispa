@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-04.jpg";
+import g0 from "../assets/gallery/barber-01.jpg";
+import g1 from "../assets/gallery/gallery-05.jpg";
+import g2 from "../assets/gallery/interior-02.jpg";
+const data = {
+ "title": "Barber near KICC Nairobi",
+ "description": "In town for a conference at KICC? Blispa Barbershop & Spa is a short walk away on Kenyatta Avenue. Haircuts, shaves and massage. Book on WhatsApp.",
+ "kicker": "For conference guests",
+ "h1": "A Barber near",
+ "h1Gold": "KICC",
+ "hook": "Speaking at KICC tomorrow and your beard is not ready?",
+ "intro": "Blispa is a short walk from KICC, on Kenyatta Avenue. Many conference guests stop in for a cut or a shave between sessions.",
+ "imageAlt": "Barber near KICC in Nairobi CBD",
+ "serviceName": "Barber near KICC",
+ "priceLow": 700,
+ "priceHigh": 2000,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Between sessions",
+   "paras": [
+    "A beard razor takes 30 minutes. Steaming takes 30. Send your time on WhatsApp and slip out between talks."
+   ]
+  },
+  {
+   "h2": "After the day ends",
+   "paras": [
+    "Open until 11pm, so a massage after a long conference day is easy to fit in."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How far is Blispa from KICC?",
+   "a": "A short walk to Kenyatta Avenue in the CBD."
+  },
+  {
+   "q": "Can I book between conference sessions?",
+   "a": "Yes. Send your time on WhatsApp."
+  },
+  {
+   "q": "Is there a massage nearby after the conference?",
+   "a": "Yes. The Blispa spa runs until 11pm."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barber-for-visitors-nairobi/",
+   "label": "For visitors to Nairobi"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I'm at a conference near KICC and would like to book."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

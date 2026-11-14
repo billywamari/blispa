@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-04.jpg";
+import g0 from "../assets/gallery/barber-02.jpg";
+import g1 from "../assets/gallery/cut-01.jpg";
+import g2 from "../assets/gallery/beard-01.jpg";
+const data = {
+ "title": "Grey Hair Dye for Men Nairobi",
+ "description": "Grey hair dye for men at Blispa, Nairobi CBD. Plain dye KSh 1,000, half colour KSh 2,000, cut and colour KSh 3,000. Natural results.",
+ "kicker": "Natural colour",
+ "h1": "Grey Hair Dye for Men in",
+ "h1Gold": "Nairobi",
+ "hook": "Want to look like you, minus a few grey hairs?",
+ "intro": "Blispa covers grey for men with a shade that matches your natural colour. You walk out looking rested, not painted.",
+ "imageAlt": "Man with freshly coloured hair at Blispa Nairobi",
+ "serviceName": "Grey hair dye for men",
+ "priceLow": 1000,
+ "priceHigh": 3000,
+ "prices": [
+  {
+   "name": "Plain dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Half colour",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Fresh cut and colour",
+   "time": "60 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Beard dye",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Full or half colour",
+   "paras": [
+    "Plain dye covers all the grey. Half colour softens it and keeps a little salt and pepper for a natural look."
+   ]
+  },
+  {
+   "h2": "Match the beard",
+   "paras": [
+    "If your beard is grey too, add beard dye for KSh 1,000 so both match."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is hair dye for men at Blispa?",
+   "a": "Plain dye is KSh 1,000. Half colour is KSh 2,000."
+  },
+  {
+   "q": "How often do I need to redo it?",
+   "a": "Every three to five weeks as new hair grows in."
+  },
+  {
+   "q": "Can I cut and colour in one visit?",
+   "a": "Yes. Fresh cut and colour is KSh 3,000."
+  }
+ ],
+ "related": [
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/beard-dye-nairobi/",
+   "label": "Beard dye"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book hair dye."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

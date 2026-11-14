@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/interior-02.jpg";
+import g2 from "../assets/gallery/gallery-07.jpg";
+const data = {
+ "title": "Full Body Massage Nairobi",
+ "description": "Full body massage in Nairobi CBD at Blispa. 60 minutes for KSh 3,500, or 30 minutes for KSh 3,000. Private room, warm towels. Book on WhatsApp.",
+ "kicker": "Head to toe",
+ "h1": "Full Body Massage in",
+ "h1Gold": "Nairobi",
+ "hook": "When did you last switch off for a whole hour?",
+ "intro": "A full body massage at Blispa covers the back, shoulders, arms, legs and feet in a quiet private room on Kenyatta Avenue.",
+ "imageAlt": "Calm massage room at Blispa in Nairobi",
+ "serviceName": "Full body massage",
+ "priceLow": 2000,
+ "priceHigh": 7000,
+ "prices": [
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Body massage",
+   "time": "30 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Two full body massages",
+   "time": "60 min",
+   "price": "KSh 7,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "30 or 60 minutes?",
+   "paras": [
+    "Thirty minutes suits a lunch break. Sixty minutes lets the therapist work every part of the body without hurrying."
+   ]
+  },
+  {
+   "h2": "Pair it up",
+   "paras": [
+    "Many clients add a facial or a pedicure. Ask on WhatsApp and the times are lined up back to back."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a full body massage in Nairobi CBD?",
+   "a": "KSh 3,500 for 60 minutes at Blispa. A 30 minute body massage is KSh 3,000."
+  },
+  {
+   "q": "Do you massage women?",
+   "a": "Yes. Blispa welcomes men and women."
+  },
+  {
+   "q": "What should I wear?",
+   "a": "Nothing special. You get towels and privacy in the room."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/deep-tissue-massage-nairobi/",
+   "label": "Deep tissue massage"
+  },
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a full body massage."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

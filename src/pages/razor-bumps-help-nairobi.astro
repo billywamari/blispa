@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/shave-02.jpg";
+import g0 from "../assets/gallery/beard-01.jpg";
+import g1 from "../assets/gallery/gallery-05.jpg";
+import g2 from "../assets/gallery/barber-01.jpg";
+const data = {
+ "title": "Razor Bumps Help in Nairobi",
+ "description": "Razor bumps after shaving? How Blispa barbers reduce bumps with hot towels, the right razor work and facials. Book a gentle shave on WhatsApp.",
+ "kicker": "Calmer skin",
+ "h1": "Help for Razor Bumps in",
+ "h1Gold": "Nairobi",
+ "hook": "Tired of bumps every time you shave?",
+ "intro": "Razor bumps happen when cut hair curls back into the skin. The right shave and good aftercare make a big difference.",
+ "imageAlt": "Gentle shave to prevent razor bumps at Blispa",
+ "serviceName": "Shaving for razor bumps",
+ "priceLow": 500,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Beard cut",
+   "time": "30 min",
+   "price": "KSh 500"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What Blispa barbers do",
+   "paras": [
+    "A hot towel first to soften the hair. Shaving with the grain, not against it. A cool finish to close the skin."
+   ]
+  },
+  {
+   "h2": "At home",
+   "paras": [
+    "Do not shave too close every day. Use a clean razor. Keep skin moisturised. If bumps keep coming, a beard cut instead of a full razor may suit you better."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why do I get razor bumps?",
+   "a": "Curly hair cut very close can grow back into the skin."
+  },
+  {
+   "q": "Does a facial help?",
+   "a": "Steaming and a facial help clean the skin and calm it."
+  },
+  {
+   "q": "Should I see a doctor?",
+   "a": "If bumps are painful or infected, see a doctor or dermatologist."
+  }
+ ],
+ "related": [
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/beard-trim-nairobi/",
+   "label": "Beard trim"
+  },
+  {
+   "href": "/mens-facial-nairobi/",
+   "label": "Facial for men"
+  },
+  {
+   "href": "/steam-facial-nairobi/",
+   "label": "Steam and scrub facial"
+  }
+ ],
+ "waText": "Hi Blispa, I get razor bumps and would like a gentle shave."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

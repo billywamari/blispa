@@ -1,0 +1,371 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/gallery-06.jpg";
+import g2 from "../assets/gallery/pedicure-01.jpg";
+const data = {
+ "title": "All Grooming and Spa Services",
+ "description": "Every Blispa service in one place: haircuts, beards, facials, massage, scrubs, nails, waxing, home visits and packages in Nairobi CBD. Book on WhatsApp.",
+ "kicker": "Everything Blispa does",
+ "h1": "All Grooming and Spa Services in",
+ "h1Gold": "Nairobi",
+ "hook": "Looking for something specific?",
+ "intro": "Here is every Blispa page in one place. Pick what you need and book it on WhatsApp.",
+ "imageAlt": "Blispa Barbershop and Spa in Nairobi CBD",
+ "serviceName": "Grooming and spa services",
+ "priceLow": 700,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Find your service",
+   "paras": [
+    "Use the links below to jump to the service, area or occasion you are interested in. Every page shows prices and a WhatsApp button."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What does Blispa offer?",
+   "a": "Haircuts, beard work, facials, massage, body scrubs, manicures, pedicures, waxing, home visits and packages."
+  },
+  {
+   "q": "Where is Blispa?",
+   "a": "Superior Centre, 4th Floor, Room K1, Kenyatta Avenue, Nairobi CBD."
+  },
+  {
+   "q": "What are the hours?",
+   "a": "Monday to Saturday 7am to 11pm. Sunday 11am to 6pm."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  },
+  {
+   "href": "/locs-nairobi-cbd/",
+   "label": "Locs and retwists"
+  },
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/waxing-nairobi-cbd/",
+   "label": "Waxing"
+  },
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/kids-haircut-nairobi/",
+   "label": "Kids haircuts"
+  },
+  {
+   "href": "/barber-for-visitors-nairobi/",
+   "label": "For visitors to Nairobi"
+  },
+  {
+   "href": "/grooming-and-spa-services-nairobi/",
+   "label": "All Blispa services"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  },
+  {
+   "href": "/beard-trim-nairobi/",
+   "label": "Beard trim"
+  },
+  {
+   "href": "/skin-fade-nairobi/",
+   "label": "Skin fade"
+  },
+  {
+   "href": "/deep-tissue-massage-nairobi/",
+   "label": "Deep tissue massage"
+  },
+  {
+   "href": "/full-body-massage-nairobi/",
+   "label": "Full body massage"
+  },
+  {
+   "href": "/back-massage-nairobi/",
+   "label": "Back massage"
+  },
+  {
+   "href": "/body-scrub-nairobi/",
+   "label": "Body scrub"
+  },
+  {
+   "href": "/coffee-body-scrub-nairobi/",
+   "label": "Coffee body scrub"
+  },
+  {
+   "href": "/mens-facial-nairobi/",
+   "label": "Facial for men"
+  },
+  {
+   "href": "/steam-facial-nairobi/",
+   "label": "Steam and scrub facial"
+  },
+  {
+   "href": "/mens-pedicure-nairobi/",
+   "label": "Pedicure for men"
+  },
+  {
+   "href": "/manicure-nairobi-cbd/",
+   "label": "Manicure"
+  },
+  {
+   "href": "/brazilian-wax-nairobi/",
+   "label": "Brazilian wax"
+  },
+  {
+   "href": "/manzilian-wax-nairobi/",
+   "label": "Waxing for men"
+  },
+  {
+   "href": "/ladies-haircut-nairobi/",
+   "label": "Ladies haircuts"
+  },
+  {
+   "href": "/texturizer-nairobi/",
+   "label": "Texturizer"
+  },
+  {
+   "href": "/beard-dye-nairobi/",
+   "label": "Beard dye"
+  },
+  {
+   "href": "/grey-hair-dye-men-nairobi/",
+   "label": "Grey hair dye for men"
+  },
+  {
+   "href": "/mens-grooming-nairobi/",
+   "label": "Mens grooming"
+  },
+  {
+   "href": "/spa-for-men-nairobi/",
+   "label": "Spa for men"
+  },
+  {
+   "href": "/spa-packages-nairobi/",
+   "label": "Spa packages"
+  },
+  {
+   "href": "/late-night-barber-nairobi/",
+   "label": "Late night barber"
+  },
+  {
+   "href": "/early-morning-barber-nairobi/",
+   "label": "Early morning barber"
+  },
+  {
+   "href": "/sunday-barber-nairobi/",
+   "label": "Sunday barber"
+  },
+  {
+   "href": "/lunch-hour-grooming-nairobi-cbd/",
+   "label": "Lunch hour grooming"
+  },
+  {
+   "href": "/groom-package-nairobi/",
+   "label": "Wedding groom package"
+  },
+  {
+   "href": "/spa-gift-nairobi/",
+   "label": "Spa gift"
+  },
+  {
+   "href": "/birthday-grooming-nairobi/",
+   "label": "Birthday grooming"
+  },
+  {
+   "href": "/couples-spa-nairobi/",
+   "label": "Couples spa day"
+  },
+  {
+   "href": "/corporate-grooming-nairobi/",
+   "label": "Corporate grooming"
+  },
+  {
+   "href": "/grooming-for-interviews-nairobi/",
+   "label": "Grooming before an interview"
+  },
+  {
+   "href": "/photo-shoot-grooming-nairobi/",
+   "label": "Grooming for shoots and content"
+  },
+  {
+   "href": "/home-barber-westlands/",
+   "label": "Home barber Westlands"
+  },
+  {
+   "href": "/home-barber-kilimani/",
+   "label": "Home barber Kilimani"
+  },
+  {
+   "href": "/home-barber-kileleshwa/",
+   "label": "Home barber Kileleshwa"
+  },
+  {
+   "href": "/home-barber-lavington/",
+   "label": "Home barber Lavington"
+  },
+  {
+   "href": "/home-barber-karen/",
+   "label": "Home barber Karen"
+  },
+  {
+   "href": "/home-barber-runda/",
+   "label": "Home barber Runda"
+  },
+  {
+   "href": "/home-barber-upper-hill/",
+   "label": "Home barber Upper Hill"
+  },
+  {
+   "href": "/home-barber-parklands/",
+   "label": "Home barber Parklands"
+  },
+  {
+   "href": "/home-barber-gigiri/",
+   "label": "Home barber Gigiri"
+  },
+  {
+   "href": "/home-barber-south-b-and-south-c/",
+   "label": "Home barber South B and South C"
+  },
+  {
+   "href": "/barber-near-sarova-stanley/",
+   "label": "Barber near The Sarova Stanley"
+  },
+  {
+   "href": "/barber-near-nairobi-serena/",
+   "label": "Barber near Nairobi Serena Hotel"
+  },
+  {
+   "href": "/barber-near-fairmont-norfolk/",
+   "label": "Barber near Fairmont The Norfolk"
+  },
+  {
+   "href": "/hotel-room-barber-nairobi/",
+   "label": "Hotel room barber"
+  },
+  {
+   "href": "/barbershop-kenyatta-avenue/",
+   "label": "Barbershop on Kenyatta Avenue"
+  },
+  {
+   "href": "/best-barbershop-nairobi-cbd/",
+   "label": "Best rated barbershop"
+  },
+  {
+   "href": "/barber-and-spa-near-moi-avenue/",
+   "label": "Near Moi Avenue"
+  },
+  {
+   "href": "/barber-near-kicc/",
+   "label": "Near KICC"
+  },
+  {
+   "href": "/how-often-haircut/",
+   "label": "How often to get a haircut"
+  },
+  {
+   "href": "/razor-bumps-help-nairobi/",
+   "label": "Razor bumps"
+  },
+  {
+   "href": "/massage-benefits/",
+   "label": "What a massage does"
+  },
+  {
+   "href": "/what-to-expect-first-spa-visit/",
+   "label": "First spa visit"
+  },
+  {
+   "href": "/kinyozi-vs-barbershop/",
+   "label": "Kinyozi or barbershop"
+  },
+  {
+   "href": "/locs-retwist-prices-nairobi/",
+   "label": "Locs retwist"
+  },
+  {
+   "href": "/kids-first-haircut-nairobi/",
+   "label": "Kids first haircut"
+  },
+  {
+   "href": "/head-to-toe-grooming-nairobi/",
+   "label": "Head to toe grooming"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

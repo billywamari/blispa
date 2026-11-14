@@ -1,0 +1,111 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/gallery-07.jpg";
+import g2 from "../assets/gallery/pedicure-01.jpg";
+const data = {
+ "title": "Spa in Nairobi CBD",
+ "description": "A calm spa on Kenyatta Avenue, Nairobi CBD. Massage from KSh 2,000, facials, scrubs, pedicures and waxing. Open till 11pm. Book on WhatsApp.",
+ "kicker": "Spa on Kenyatta Avenue",
+ "h1": "A Quiet Spa in the Middle of",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Need an hour of quiet without leaving town?",
+ "intro": "Blispa is a barbershop and spa in one, on the 4th floor of Superior Centre. Step out of the CBD noise into private rooms, warm towels and trained therapists.",
+ "imageAlt": "Calm spa room at Blispa in Nairobi CBD",
+ "serviceName": "Spa in Nairobi CBD",
+ "priceLow": 2000,
+ "priceHigh": 4500,
+ "prices": [
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Body scrub",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "What you can book at the spa",
+   "paras": [
+    "Massage, deep tissue work, facials, body scrubs, pedicures, manicures and waxing. Men and women are both welcome.",
+    "Each treatment is timed, so you know if it fits your lunch hour or needs an evening slot."
+   ]
+  },
+  {
+   "h2": "Open late for busy people",
+   "paras": [
+    "The spa runs until 11pm from Monday to Saturday. Many clients come after work, when the city traffic is at its worst anyway."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is there a spa in Nairobi CBD?",
+   "a": "Yes. Blispa Barbershop & Spa is on the 4th floor of Superior Centre, Kenyatta Avenue, with massage, facials, scrubs and nails."
+  },
+  {
+   "q": "How much is a massage in the CBD?",
+   "a": "A back massage is KSh 2,000. A full body massage is KSh 3,500. Deep tissue for 80 minutes is KSh 4,500."
+  },
+  {
+   "q": "What time does the spa close?",
+   "a": "11pm from Monday to Saturday and 6pm on Sunday."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/waxing-nairobi-cbd/",
+   "label": "Waxing"
+  },
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a spa treatment."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-09.jpg";
+import g0 from "../assets/gallery/gallery-05.jpg";
+import g1 from "../assets/gallery/interior-02.jpg";
+import g2 from "../assets/gallery/gallery-06.jpg";
+const data = {
+ "title": "Steam Facial in Nairobi CBD",
+ "description": "Quick steam and scrub facials at Blispa, Nairobi CBD. Steaming KSh 1,000, scrub and steam KSh 1,500, scrub and mask KSh 1,500. Book on WhatsApp.",
+ "kicker": "Quick skin refresh",
+ "h1": "Steam and Scrub Facials in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Only have 30 minutes but your skin needs help?",
+ "intro": "Not every visit needs a full facial. A steam or a scrub with steam opens pores and clears the surface in under an hour.",
+ "imageAlt": "Steam facial at Blispa in Nairobi CBD",
+ "serviceName": "Steam and scrub facial",
+ "priceLow": 1000,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Scrub and steaming",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Scrub and mask",
+   "time": "60 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Fast and affordable",
+   "paras": [
+    "Steaming takes 30 minutes for KSh 1,000. It suits lunch hour and pairs well with a haircut."
+   ]
+  },
+  {
+   "h2": "When to go for the full facial",
+   "paras": [
+    "If you have stubborn spots or very dry skin, the full facial at KSh 2,500 gives the therapist time to treat it properly."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is steaming at Blispa?",
+   "a": "KSh 1,000 for 30 minutes."
+  },
+  {
+   "q": "What is scrub and mask?",
+   "a": "A gentle scrub followed by a calming mask. It takes 60 minutes and costs KSh 1,500."
+  },
+  {
+   "q": "Can I add steaming to a haircut?",
+   "a": "Yes. Many clients do it right after their cut."
+  }
+ ],
+ "related": [
+  {
+   "href": "/mens-facial-nairobi/",
+   "label": "Facial for men"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/lunch-hour-grooming-nairobi-cbd/",
+   "label": "Lunch hour grooming"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a steam facial."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

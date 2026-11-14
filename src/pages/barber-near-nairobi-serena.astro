@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-01.jpg";
+import g0 from "../assets/gallery/fade-04.jpg";
+import g1 from "../assets/gallery/beard-01.jpg";
+import g2 from "../assets/gallery/gallery-06.jpg";
+const data = {
+ "title": "Barber near Nairobi Serena Hotel",
+ "description": "Staying at Nairobi Serena Hotel? Blispa Barbershop & Spa is a short walk up Kenyatta Avenue, on Kenyatta Avenue. Haircuts, shaves and massage. Or a barber com",
+ "kicker": "For hotel guests",
+ "h1": "A Barber Near",
+ "h1Gold": "Nairobi Serena Hotel",
+ "hook": "Landed in Nairobi and need a proper shave before your meeting?",
+ "intro": "Blispa Barbershop & Spa is a short walk up Kenyatta Avenue, on the 4th floor of Superior Centre. Rated 4.9 on Google by locals and visitors.",
+ "imageAlt": "Barbershop near Nairobi Serena Hotel in Nairobi",
+ "serviceName": "Barber near Nairobi Serena Hotel",
+ "priceLow": 700,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Walk in or we come to you",
+   "paras": [
+    "Come to the shop on Kenyatta Avenue, or send your room details on WhatsApp and a barber comes to the hotel."
+   ]
+  },
+  {
+   "h2": "Open early and late",
+   "paras": [
+    "Open from 7am to 11pm from Monday to Saturday. Sunday hours are 11am to 6pm. That covers early flights and late arrivals."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is there a good barber near Nairobi Serena Hotel?",
+   "a": "Blispa Barbershop & Spa is a short walk up Kenyatta Avenue, rated 4.9 on Google."
+  },
+  {
+   "q": "Can a barber come to my room?",
+   "a": "Yes. Send your hotel and room details on WhatsApp for a quote."
+  },
+  {
+   "q": "Can I pay as a visitor?",
+   "a": "Ask about payment options when you book on WhatsApp."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barber-for-visitors-nairobi/",
+   "label": "For visitors to Nairobi"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/price-list/",
+   "label": "Full price list"
+  }
+ ],
+ "waText": "Hi Blispa, I'm staying at Nairobi Serena Hotel and would like to book."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

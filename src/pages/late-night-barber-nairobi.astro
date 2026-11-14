@@ -1,0 +1,97 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-01.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/barber-01.jpg";
+import g2 from "../assets/gallery/cut-02.jpg";
+const data = {
+ "title": "Late Night Barber in Nairobi",
+ "description": "Barbershop and spa open till 11pm in Nairobi CBD. Blispa on Kenyatta Avenue takes haircuts, shaves and massage after work. Book on WhatsApp.",
+ "kicker": "Open till 11pm",
+ "h1": "A Barber Open Late in",
+ "h1Gold": "Nairobi",
+ "hook": "Finished work at 8 and still need a cut tonight?",
+ "intro": "Blispa stays open until 11pm from Monday to Saturday. Come after work, after the gym or before a night out.",
+ "imageAlt": "Barbershop open late at Blispa Nairobi CBD",
+ "serviceName": "Late night barbershop",
+ "priceLow": 700,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Evenings are calmer",
+   "paras": [
+    "The CBD empties after 7pm. Traffic eases and the chairs are less busy, so you get the barber's full attention."
+   ]
+  },
+  {
+   "h2": "Book your slot",
+   "paras": [
+    "Send the time you want on WhatsApp. Your barber or therapist is ready when you arrive."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is there a barber open late in Nairobi CBD?",
+   "a": "Yes. Blispa on Kenyatta Avenue is open until 11pm from Monday to Saturday."
+  },
+  {
+   "q": "Can I get a massage at night?",
+   "a": "Yes. The spa runs until 11pm too."
+  },
+  {
+   "q": "What about Sunday?",
+   "a": "Sunday hours are 11am to 6pm."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/early-morning-barber-nairobi/",
+   "label": "Early morning barber"
+  },
+  {
+   "href": "/sunday-barber-nairobi/",
+   "label": "Sunday barber"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book an evening slot."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

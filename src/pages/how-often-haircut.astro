@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/cut-01.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/fade-02.jpg";
+import g2 from "../assets/gallery/cut-02.jpg";
+const data = {
+ "title": "How Often Should Men Get a Haircut",
+ "description": "How often should you get a haircut? Fades every 2 weeks, classic cuts every 3 to 4, beards every 2 to 3. Simple advice from Blispa barbers.",
+ "kicker": "Barber advice",
+ "h1": "How Often Should You Get a",
+ "h1Gold": "Haircut?",
+ "hook": "Is your haircut already three weeks past its best?",
+ "intro": "Every style grows out at a different speed. Here is what Blispa barbers tell clients in the chair.",
+ "imageAlt": "Fresh haircut at Blispa Nairobi",
+ "serviceName": "Haircut advice",
+ "priceLow": 500,
+ "priceHigh": 1200,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard cut",
+   "time": "30 min",
+   "price": "KSh 500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A simple guide",
+   "paras": [
+    "Skin fades: every 2 weeks. Short classic cuts: every 3 to 4 weeks. Longer styles: every 4 to 6 weeks. Beards: a tidy every 2 to 3 weeks."
+   ]
+  },
+  {
+   "h2": "Save money between cuts",
+   "paras": [
+    "A quick lineup keeps the edges sharp and stretches the time to your next full cut."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How often should I get a fade?",
+   "a": "Every two weeks keeps the blend clean."
+  },
+  {
+   "q": "How often should I trim my beard?",
+   "a": "Every two to three weeks for shape."
+  },
+  {
+   "q": "Can I book my next cut in advance?",
+   "a": "Yes. Ask your barber to book it before you leave."
+  }
+ ],
+ "related": [
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  },
+  {
+   "href": "/skin-fade-nairobi/",
+   "label": "Skin fade"
+  },
+  {
+   "href": "/beard-trim-nairobi/",
+   "label": "Beard trim"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book my next haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

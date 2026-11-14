@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/cut-03.jpg";
+import g0 from "../assets/gallery/cut-01.jpg";
+import g1 from "../assets/gallery/fade-03.jpg";
+import g2 from "../assets/gallery/gallery-04.jpg";
+const data = {
+ "title": "Texturizer in Nairobi CBD",
+ "description": "Texturizer for short hair at Blispa, Nairobi CBD. Plain texturizer KSh 1,000 for 45 minutes. Soft waves and easy styling. Book on WhatsApp.",
+ "kicker": "Waves and curls",
+ "h1": "Texturizer in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Want waves that show without hours of brushing?",
+ "intro": "A texturizer loosens the curl pattern just enough to give short hair soft waves. It is gentler than a full relaxer.",
+ "imageAlt": "Short textured hair at Blispa Nairobi",
+ "serviceName": "Texturizer",
+ "priceLow": 1000,
+ "priceHigh": 1500,
+ "prices": [
+  {
+   "name": "Plain texturizer",
+   "time": "45 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Ladies fresh cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Who it suits",
+   "paras": [
+    "Men and women with short hair who want defined waves or curls. Your barber checks your scalp first."
+   ]
+  },
+  {
+   "h2": "Keeping it healthy",
+   "paras": [
+    "Wait a few weeks between treatments. Moisturise daily. Pair it with a fresh cut so the shape stays sharp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a texturizer at Blispa?",
+   "a": "KSh 1,000 for 45 minutes."
+  },
+  {
+   "q": "Is a texturizer the same as a relaxer?",
+   "a": "No. It is milder and keeps some of your natural curl."
+  },
+  {
+   "q": "Can I get a haircut on the same day?",
+   "a": "Yes. Many clients cut first, then texturize."
+  }
+ ],
+ "related": [
+  {
+   "href": "/ladies-haircut-nairobi/",
+   "label": "Ladies haircuts"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a texturizer."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

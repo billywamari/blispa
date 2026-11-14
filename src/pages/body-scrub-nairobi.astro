@@ -1,0 +1,87 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-07.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/interior-02.jpg";
+import g2 from "../assets/gallery/gallery-09.jpg";
+const data = {
+ "title": "Body Scrub in Nairobi CBD",
+ "description": "Body scrub at Blispa, Nairobi CBD. Classic scrub KSh 3,500 for 60 minutes. Coffee body scrub KSh 4,000. Smooth skin in one visit. Book on WhatsApp.",
+ "kicker": "Smooth skin",
+ "h1": "Body Scrub in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Does your skin feel dull no matter how much lotion you use?",
+ "intro": "A body scrub lifts dead skin so the fresh layer underneath can breathe. Your skin feels softer the same day and lotion finally sinks in.",
+ "imageAlt": "Body scrub treatment room at Blispa Nairobi",
+ "serviceName": "Body scrub",
+ "priceLow": 3500,
+ "priceHigh": 4000,
+ "prices": [
+  {
+   "name": "Body scrub",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Coffee body scrub",
+   "time": "80 min",
+   "price": "KSh 4,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Classic or coffee?",
+   "paras": [
+    "The classic scrub is gentle and suits most skin. The coffee scrub is richer and leaves a warm smell that lasts the evening."
+   ]
+  },
+  {
+   "h2": "Best before an event",
+   "paras": [
+    "Book a scrub two or three days before a wedding, holiday or photo shoot. Skin looks its best once it has settled."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a body scrub at Blispa?",
+   "a": "KSh 3,500 for 60 minutes. The coffee body scrub is KSh 4,000."
+  },
+  {
+   "q": "How often should I get a scrub?",
+   "a": "Once every three to four weeks is enough for most skin."
+  },
+  {
+   "q": "Can I add a massage?",
+   "a": "Yes. Ask on WhatsApp to book both in one visit."
+  }
+ ],
+ "related": [
+  {
+   "href": "/coffee-body-scrub-nairobi/",
+   "label": "Coffee body scrub"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a body scrub."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

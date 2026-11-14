@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-11.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/gallery-09.jpg";
+import g2 from "../assets/gallery/interior-02.jpg";
+const data = {
+ "title": "Spa Gift Ideas in Nairobi",
+ "description": "Looking for a gift in Nairobi? Book a massage, scrub or full grooming visit at Blispa for someone special. Arrange it on WhatsApp.",
+ "kicker": "A gift they will use",
+ "h1": "Spa Gift Ideas in",
+ "h1Gold": "Nairobi",
+ "hook": "Tired of gifts that end up in a drawer?",
+ "intro": "A massage or a full grooming visit is a gift people actually enjoy. Blispa helps you set it up for a birthday, an anniversary or a thank you.",
+ "imageAlt": "Spa gift treatment at Blispa Nairobi",
+ "serviceName": "Spa gift",
+ "priceLow": 2500,
+ "priceHigh": 7000,
+ "prices": [
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Coffee body scrub",
+   "time": "80 min",
+   "price": "KSh 4,000"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Two full body massages",
+   "time": "60 min",
+   "price": "KSh 7,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Ideas by budget",
+   "paras": [
+    "Under KSh 3,000: back massage or full facial. Around KSh 4,000: coffee body scrub or deep tissue massage. For two: two full body massages for KSh 7,000."
+   ]
+  },
+  {
+   "h2": "How to arrange it",
+   "paras": [
+    "Send Blispa the name of the person, the treatment and a few times that suit them. Blispa confirms the booking with you."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I book a spa treatment for someone else?",
+   "a": "Yes. Send their name and the treatment on WhatsApp."
+  },
+  {
+   "q": "What is a good gift for a man?",
+   "a": "A haircut, beard razor and full facial, or a deep tissue massage."
+  },
+  {
+   "q": "What about a couple?",
+   "a": "Two full body massages side by side cost KSh 7,000."
+  }
+ ],
+ "related": [
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/coffee-body-scrub-nairobi/",
+   "label": "Coffee body scrub"
+  },
+  {
+   "href": "/spa-packages-nairobi/",
+   "label": "Spa packages"
+  },
+  {
+   "href": "/birthday-grooming-nairobi/",
+   "label": "Birthday grooming"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a treatment as a gift."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

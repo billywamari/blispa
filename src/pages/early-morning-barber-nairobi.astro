@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-03.jpg";
+import g0 from "../assets/gallery/barber-02.jpg";
+import g1 from "../assets/gallery/shave-02.jpg";
+import g2 from "../assets/gallery/cut-01.jpg";
+const data = {
+ "title": "Early Morning Barber Nairobi",
+ "description": "Barbershop open from 7am in Nairobi CBD. Get a cut or a hot towel shave at Blispa before your first meeting. Book on WhatsApp.",
+ "kicker": "Open from 7am",
+ "h1": "An Early Morning Barber in",
+ "h1Gold": "Nairobi",
+ "hook": "Big meeting at 9 and no time after work?",
+ "intro": "Blispa opens at 7am from Monday to Saturday. Walk into the CBD early, sit in the chair and be at your desk sharp.",
+ "imageAlt": "Morning haircut at Blispa Nairobi CBD",
+ "serviceName": "Early morning barbershop",
+ "priceLow": 700,
+ "priceHigh": 1200,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Beat the rush",
+   "paras": [
+    "Mornings are quiet. You are in and out before the city wakes up properly."
+   ]
+  },
+  {
+   "h2": "Interview or pitch today?",
+   "paras": [
+    "A fresh cut and a hot towel shave take about an hour and a half. Book the night before on WhatsApp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What time does Blispa open?",
+   "a": "7am from Monday to Saturday and 11am on Sunday."
+  },
+  {
+   "q": "Can I book a 7am slot?",
+   "a": "Yes. Send the time on WhatsApp the day before."
+  },
+  {
+   "q": "Is there coffee?",
+   "a": "Yes. Coffee or juice is offered while you wait."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/grooming-for-interviews-nairobi/",
+   "label": "Grooming before an interview"
+  },
+  {
+   "href": "/late-night-barber-nairobi/",
+   "label": "Late night barber"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book an early morning slot."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

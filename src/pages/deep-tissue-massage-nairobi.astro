@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/gallery-07.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Deep Tissue Massage Nairobi",
+ "description": "Deep tissue massage in Nairobi CBD at Blispa. 80 minutes for KSh 4,500. Trained therapists, private room, open till 11pm. Book on WhatsApp.",
+ "kicker": "80 minutes, firm pressure",
+ "h1": "Deep Tissue Massage in",
+ "h1Gold": "Nairobi",
+ "hook": "Do your shoulders feel like they carry the whole week?",
+ "intro": "Deep tissue massage works slowly into tight muscles in the back, neck and legs. At Blispa it runs for 80 minutes, so nothing is rushed.",
+ "imageAlt": "Private massage room at Blispa Nairobi",
+ "serviceName": "Deep tissue massage",
+ "priceLow": 2000,
+ "priceHigh": 9000,
+ "prices": [
+  {
+   "name": "Deep tissue massage",
+   "time": "80 min",
+   "price": "KSh 4,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Two deep tissue massages",
+   "time": "80 min",
+   "price": "KSh 9,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Who it helps",
+   "paras": [
+    "People who sit at a desk all day, drive long hours, train in the gym or carry stress in their shoulders. Tell your therapist where it hurts before you start."
+   ]
+  },
+  {
+   "h2": "What to expect",
+   "paras": [
+    "Pressure is firm but never more than you agree to. Say so if it is too much. Drink water afterwards and expect to feel loose and a little tired."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is deep tissue massage at Blispa?",
+   "a": "KSh 4,500 for 80 minutes."
+  },
+  {
+   "q": "Is deep tissue painful?",
+   "a": "It is firm. Your therapist adjusts the pressure to what you are comfortable with."
+  },
+  {
+   "q": "Can two people book together?",
+   "a": "Yes. Two deep tissue massages are KSh 9,000."
+  }
+ ],
+ "related": [
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/back-massage-nairobi/",
+   "label": "Back massage"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a deep tissue massage."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
