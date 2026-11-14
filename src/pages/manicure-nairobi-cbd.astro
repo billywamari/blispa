@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-08.jpg";
+import g0 from "../assets/gallery/gallery-02.jpg";
+import g1 from "../assets/gallery/pedicure-01.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Manicure in Nairobi CBD",
+ "description": "Manicure in Nairobi CBD at Blispa. From KSh 700, full manicure KSh 1,500, nail cut KSh 400. Neat hands for meetings. Book on WhatsApp.",
+ "kicker": "Neat hands",
+ "h1": "Manicure in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "What do your hands say in a handshake?",
+ "intro": "People notice hands in meetings, on video calls and on a first date. A Blispa manicure shapes nails, softens cuticles and cleans up dry skin.",
+ "imageAlt": "Manicure at Blispa in Nairobi CBD",
+ "serviceName": "Manicure",
+ "priceLow": 400,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Manicure",
+   "time": "from 25 min",
+   "price": "from KSh 700"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Nail cut",
+   "time": "15 min",
+   "price": "KSh 400"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Quick or full",
+   "paras": [
+    "A basic manicure starts from 25 minutes. The full manicure takes 40 minutes and includes a hand massage."
+   ]
+  },
+  {
+   "h2": "For men and women",
+   "paras": [
+    "Most clients want clean, natural nails. Ask on WhatsApp if you have something specific in mind."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a manicure in Nairobi CBD?",
+   "a": "At Blispa a manicure starts from KSh 700. A full manicure is KSh 1,500."
+  },
+  {
+   "q": "How long does it take?",
+   "a": "From 25 minutes for a basic manicure to 40 minutes for the full one."
+  },
+  {
+   "q": "Can I do it with a pedicure?",
+   "a": "Yes. Book both on WhatsApp and they are done back to back."
+  }
+ ],
+ "related": [
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/mens-pedicure-nairobi/",
+   "label": "Pedicure for men"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a manicure."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

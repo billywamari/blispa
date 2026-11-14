@@ -1,0 +1,69 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/locs-01.jpg";
+import g0 from "../assets/gallery/locs-02.jpg";
+import g1 from "../assets/gallery/locs-03.jpg";
+import g2 from "../assets/gallery/locs-04.jpg";
+const data = {
+ "title": "Locs Retwist in Nairobi CBD",
+ "description": "Locs retwist, starter locs and locs styling at Blispa, Nairobi CBD. Neat roots and clean parts. Send a photo on WhatsApp for your price.",
+ "kicker": "Locs care",
+ "h1": "Locs Retwist in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Are your roots starting to steal the show?",
+ "intro": "Neat roots make locs look fresh and grown. Blispa retwists, styles and cares for locs for men and women in the CBD.",
+ "imageAlt": "Fresh locs retwist at Blispa Nairobi",
+ "serviceName": "Locs retwist",
+ "prices": [],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Price depends on your locs",
+   "paras": [
+    "Length, thickness and number of locs change the time needed. Send a photo on WhatsApp and Blispa replies with your price."
+   ]
+  },
+  {
+   "h2": "How often to retwist",
+   "paras": [
+    "Every four to six weeks keeps roots neat without stressing the scalp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a locs retwist at Blispa?",
+   "a": "Send a photo on WhatsApp for an exact price, since it depends on length and thickness."
+  },
+  {
+   "q": "Do you start new locs?",
+   "a": "Yes. Ask on WhatsApp about starter locs."
+  },
+  {
+   "q": "How long does a retwist take?",
+   "a": "It depends on the number of locs. Blispa confirms when you book."
+  }
+ ],
+ "related": [
+  {
+   "href": "/locs-nairobi-cbd/",
+   "label": "Locs and retwists"
+  },
+  {
+   "href": "/ladies-haircut-nairobi/",
+   "label": "Ladies haircuts"
+  },
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like a price for a locs retwist."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

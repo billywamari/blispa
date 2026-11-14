@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/barber-01.jpg";
+import g0 from "../assets/gallery/shave-02.jpg";
+import g1 from "../assets/gallery/fade-03.jpg";
+import g2 from "../assets/gallery/gallery-06.jpg";
+const data = {
+ "title": "Hotel Room Barber in Nairobi",
+ "description": "A barber who comes to your hotel room in Nairobi. Haircuts, shaves and massage from Blispa, rated 4.9 on Google. Send your hotel on WhatsApp.",
+ "kicker": "We come to you",
+ "h1": "A Barber Who Comes to Your Hotel in",
+ "h1Gold": "Nairobi",
+ "hook": "Back to back meetings and no time to find a barber?",
+ "intro": "Blispa sends a barber or therapist to hotels across Nairobi. Clean tools, quick setup and no need to leave your room.",
+ "imageAlt": "Barber with clean tools from Blispa Nairobi",
+ "serviceName": "Hotel room barber",
+ "priceLow": 700,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "How to book",
+   "paras": [
+    "Send your hotel, room number and preferred time on WhatsApp. Blispa confirms the price and the barber's arrival time."
+   ]
+  },
+  {
+   "h2": "Prefer the shop?",
+   "paras": [
+    "Blispa is on Kenyatta Avenue in the CBD, close to the city centre hotels."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can a barber come to my hotel in Nairobi?",
+   "a": "Yes. Send your hotel and time on WhatsApp for a quote."
+  },
+  {
+   "q": "Can I get a massage in my hotel room?",
+   "a": "Ask on WhatsApp and Blispa confirms what can be done at your hotel."
+  },
+  {
+   "q": "Do you speak English?",
+   "a": "Yes. English and Swahili."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barber-for-visitors-nairobi/",
+   "label": "For visitors to Nairobi"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/barber-near-sarova-stanley/",
+   "label": "Barber near The Sarova Stanley"
+  },
+  {
+   "href": "/barber-near-nairobi-serena/",
+   "label": "Barber near Nairobi Serena Hotel"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  }
+ ],
+ "waText": "Hi Blispa, I would like a barber at my hotel."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

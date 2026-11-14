@@ -1,0 +1,82 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/interior-02.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/interior-01.jpg";
+import g2 from "../assets/gallery/gallery-07.jpg";
+const data = {
+ "title": "Waxing for Men in Nairobi",
+ "description": "Waxing for men in Nairobi CBD at Blispa. Manzilian KSh 2,500, armpit KSh 1,500. Discreet private room, trained therapists. Book on WhatsApp.",
+ "kicker": "Discreet grooming",
+ "h1": "Waxing for Men in",
+ "h1Gold": "Nairobi",
+ "hook": "Want smooth skin without a razor every other day?",
+ "intro": "More men in Nairobi now wax instead of shaving their body. At Blispa it is done in a private room by therapists who do this every day.",
+ "imageAlt": "Discreet treatment room at Blispa Nairobi",
+ "serviceName": "Waxing for men",
+ "priceLow": 1500,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Manzilian waxing (men)",
+   "time": "45 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Armpit waxing",
+   "time": "15 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Why men choose wax",
+   "paras": [
+    "No razor bumps, no daily stubble and results that last weeks. Many athletes and swimmers prefer it."
+   ]
+  },
+  {
+   "h2": "Simple prep",
+   "paras": [
+    "Let hair grow about two weeks. Shower before you come. Avoid tight clothes and the gym for a day after."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What is a Manzilian?",
+   "a": "A full intimate wax for men. At Blispa it takes 45 minutes and costs KSh 2,500."
+  },
+  {
+   "q": "Is it private?",
+   "a": "Yes. It is done in a private room."
+  },
+  {
+   "q": "How long does it last?",
+   "a": "Usually three to five weeks."
+  }
+ ],
+ "related": [
+  {
+   "href": "/waxing-nairobi-cbd/",
+   "label": "Waxing"
+  },
+  {
+   "href": "/brazilian-wax-nairobi/",
+   "label": "Brazilian wax"
+  },
+  {
+   "href": "/spa-for-men-nairobi/",
+   "label": "Spa for men"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a wax."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

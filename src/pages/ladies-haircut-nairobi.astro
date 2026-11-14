@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/cut-02.jpg";
+import g0 from "../assets/gallery/cut-03.jpg";
+import g1 from "../assets/gallery/gallery-03.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Ladies Haircut in Nairobi CBD",
+ "description": "Short haircuts and fresh cuts for ladies at Blispa, Nairobi CBD. Fresh cut KSh 1,500, cut and colour KSh 3,000. Book on WhatsApp.",
+ "kicker": "Short cuts for women",
+ "h1": "Ladies Haircuts in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Thinking of going short but scared of a barber who only cuts men?",
+ "intro": "Blispa barbers cut short natural hair for women every week. Clean shapes, soft edges and colour if you want it.",
+ "imageAlt": "Short ladies haircut at Blispa Nairobi",
+ "serviceName": "Ladies haircut",
+ "priceLow": 1000,
+ "priceHigh": 3000,
+ "prices": [
+  {
+   "name": "Ladies fresh cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Ladies haircut and colour",
+   "time": "60 min",
+   "price": "KSh 3,000"
+  },
+  {
+   "name": "Plain texturizer",
+   "time": "45 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Half colour",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Your first big chop",
+   "paras": [
+    "Bring a photo or two. Your barber talks you through what will suit your face shape and how it grows out."
+   ]
+  },
+  {
+   "h2": "Add colour",
+   "paras": [
+    "Blonde, copper or a soft brown. A cut with colour is KSh 3,000 and takes about an hour."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you cut women's hair?",
+   "a": "Yes. A ladies fresh cut is KSh 1,500."
+  },
+  {
+   "q": "Can I get colour?",
+   "a": "Yes. A ladies haircut and colour is KSh 3,000."
+  },
+  {
+   "q": "Do you do texturizer?",
+   "a": "Yes. A plain texturizer is KSh 1,000."
+  }
+ ],
+ "related": [
+  {
+   "href": "/hair-colour-nairobi/",
+   "label": "Hair colour and dye"
+  },
+  {
+   "href": "/texturizer-nairobi/",
+   "label": "Texturizer"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/waxing-nairobi-cbd/",
+   "label": "Waxing"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a ladies haircut."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
