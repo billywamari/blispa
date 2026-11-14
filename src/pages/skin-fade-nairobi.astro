@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-01.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/fade-03.jpg";
+import g2 from "../assets/gallery/fade-04.jpg";
+const data = {
+ "title": "Skin Fade in Nairobi CBD",
+ "description": "Clean skin fades, taper fades and razor lineups at Blispa, Nairobi CBD. Razor cut KSh 1,200. Barbers who take their time. Book on WhatsApp.",
+ "kicker": "Fades and tapers",
+ "h1": "Skin Fades That Blend in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Tired of a fade that shows a line by Wednesday?",
+ "intro": "A skin fade lives or dies on the blend. Blispa barbers work in stages from skin to length and check the fade under good light before you stand up.",
+ "imageAlt": "Clean skin fade at Blispa Barbershop Nairobi",
+ "serviceName": "Skin fade haircut",
+ "priceLow": 700,
+ "priceHigh": 1500,
+ "prices": [
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Crazy cut",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "High, mid or low fade?",
+   "paras": [
+    "A high fade is sharp and bold. A mid fade suits most offices. A low fade grows out softly. Show your barber a photo and talk it through first."
+   ]
+  },
+  {
+   "h2": "Keep it fresh",
+   "paras": [
+    "Skin fades grow out fast. Most clients come back every two weeks. A quick lineup in between keeps the edges sharp."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a skin fade at Blispa?",
+   "a": "A razor cut, which covers skin fades, is KSh 1,200."
+  },
+  {
+   "q": "How long does a fade take?",
+   "a": "About 45 minutes, so the blend is done properly."
+  },
+  {
+   "q": "Can I bring a photo?",
+   "a": "Yes. Send it on WhatsApp before you come so your barber is ready."
+  }
+ ],
+ "related": [
+  {
+   "href": "/haircut-prices-nairobi/",
+   "label": "Haircut prices in Nairobi"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/beard-trim-nairobi/",
+   "label": "Beard trim"
+  },
+  {
+   "href": "/kids-haircut-nairobi/",
+   "label": "Kids haircuts"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a skin fade."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
