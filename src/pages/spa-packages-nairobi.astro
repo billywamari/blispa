@@ -1,0 +1,103 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-11.jpg";
+import g0 from "../assets/gallery/gallery-06.jpg";
+import g1 from "../assets/gallery/pedicure-01.jpg";
+import g2 from "../assets/gallery/gallery-05.jpg";
+const data = {
+ "title": "Spa Packages in Nairobi CBD",
+ "description": "Spa packages at Blispa, Nairobi CBD. Combine massage, scrub, facial and pedicure in one visit. Build your own from the menu. Book on WhatsApp.",
+ "kicker": "Mix and match",
+ "h1": "Spa Packages in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Why choose one treatment when you can have the whole afternoon?",
+ "intro": "Blispa lets you combine treatments from the menu into one visit. Here are popular combinations and what they cost at menu prices.",
+ "imageAlt": "Spa treatments at Blispa Nairobi",
+ "serviceName": "Spa packages",
+ "priceLow": 1500,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Body scrub",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Popular combinations",
+   "paras": [
+    "Relax: full body massage and full facial, KSh 6,000 at menu prices.",
+    "Glow: body scrub and full facial, KSh 6,000 at menu prices.",
+    "Head to toe: full body massage, full facial and full pedicure, KSh 8,500 at menu prices."
+   ]
+  },
+  {
+   "h2": "Ask for your price",
+   "paras": [
+    "Send the combination you want on WhatsApp. Blispa confirms the total and the times before you come."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does Blispa have spa packages?",
+   "a": "Yes. You can combine any treatments from the menu in one visit."
+  },
+  {
+   "q": "How long does a package take?",
+   "a": "Two to three hours for most combinations."
+  },
+  {
+   "q": "Can I book a package for two?",
+   "a": "Yes. See the couples massage page or ask on WhatsApp."
+  }
+ ],
+ "related": [
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/couples-massage-nairobi/",
+   "label": "Couples massage"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  },
+  {
+   "href": "/spa-gift-nairobi/",
+   "label": "Spa gift"
+  },
+  {
+   "href": "/massage-nairobi-cbd/",
+   "label": "Massage in the CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a spa package."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/fade-02.jpg";
+import g0 from "../assets/gallery/cut-02.jpg";
+import g1 from "../assets/gallery/gallery-04.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Barber Open on Sunday Nairobi",
+ "description": "Barbershop and spa open on Sunday in Nairobi CBD, 11am to 6pm. Haircuts, shaves, pedicures and massage at Blispa. Book on WhatsApp.",
+ "kicker": "Sunday 11am to 6pm",
+ "h1": "A Barber Open on Sunday in",
+ "h1Gold": "Nairobi",
+ "hook": "Need to look sharp for Monday but busy all week?",
+ "intro": "Blispa opens on Sunday from 11am to 6pm. The CBD is quiet, parking is easy and the week ahead starts with a fresh cut.",
+ "imageAlt": "Sunday haircut at Blispa Nairobi",
+ "serviceName": "Sunday barbershop",
+ "priceLow": 1000,
+ "priceHigh": 3500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full body massage",
+   "time": "60 min",
+   "price": "KSh 3,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "A calm day in town",
+   "paras": [
+    "Sunday in the CBD means empty streets and easy parking. It is a good day for a longer visit with a pedicure or massage."
+   ]
+  },
+  {
+   "h2": "Book ahead",
+   "paras": [
+    "Sunday hours are shorter, so send your time on WhatsApp to hold a chair."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is Blispa open on Sunday?",
+   "a": "Yes. From 11am to 6pm."
+  },
+  {
+   "q": "Is the spa open on Sunday?",
+   "a": "Yes. Massage, facials and pedicures run during Sunday hours."
+  },
+  {
+   "q": "Is parking easy?",
+   "a": "The CBD is much quieter on Sunday, so parking nearby is easier."
+  }
+ ],
+ "related": [
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/late-night-barber-nairobi/",
+   "label": "Late night barber"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/kids-haircut-nairobi/",
+   "label": "Kids haircuts"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book on Sunday."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

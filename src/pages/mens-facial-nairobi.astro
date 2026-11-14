@@ -1,0 +1,96 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-05.jpg";
+import g0 from "../assets/gallery/gallery-09.jpg";
+import g1 from "../assets/gallery/interior-02.jpg";
+import g2 from "../assets/gallery/beard-01.jpg";
+const data = {
+ "title": "Facial for Men in Nairobi",
+ "description": "Facials for men at Blispa, Nairobi CBD. Full facial KSh 2,500, scrub and steam KSh 1,500. Clears bumps and dull skin. Book on WhatsApp.",
+ "kicker": "Skin care for men",
+ "h1": "Facials for Men in",
+ "h1Gold": "Nairobi",
+ "hook": "Is your face paying for the dust, the sun and the razor?",
+ "intro": "Nairobi dust, sun and daily shaving are hard on skin. A Blispa facial cleans deep, calms razor bumps and leaves your face looking awake.",
+ "imageAlt": "Man relaxing during a facial at Blispa Nairobi",
+ "serviceName": "Facial for men",
+ "priceLow": 1000,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Scrub and steaming",
+   "time": "45 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Scrub and mask",
+   "time": "60 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Which facial to pick",
+   "paras": [
+    "Steaming opens pores. Scrub and steam clears dead skin. Scrub and mask adds a calming finish. The full facial does all of it."
+   ]
+  },
+  {
+   "h2": "Pair it with a shave",
+   "paras": [
+    "A facial after a beard razor calms the skin and helps stop bumps. Book both on WhatsApp in one go."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do men really need facials?",
+   "a": "Men shave, sweat and sit in traffic. A facial once a month keeps skin clear and calm."
+  },
+  {
+   "q": "How much is a facial for men at Blispa?",
+   "a": "A full facial is KSh 2,500. Scrub and steaming is KSh 1,500."
+  },
+  {
+   "q": "Will it help razor bumps?",
+   "a": "Yes. Cleaning and steaming help. Your therapist can advise on aftercare."
+  }
+ ],
+ "related": [
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/hot-towel-shave-nairobi/",
+   "label": "Hot towel shave"
+  },
+  {
+   "href": "/steam-facial-nairobi/",
+   "label": "Steam and scrub facial"
+  },
+  {
+   "href": "/beard-trim-nairobi/",
+   "label": "Beard trim"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a facial."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

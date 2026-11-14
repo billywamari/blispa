@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/gallery-04.jpg";
+import g0 from "../assets/gallery/fade-02.jpg";
+import g1 from "../assets/gallery/gallery-05.jpg";
+import g2 from "../assets/gallery/barber-01.jpg";
+const data = {
+ "title": "Grooming for Photo Shoots",
+ "description": "Grooming for photo shoots, video and content creators in Nairobi. Camera ready cuts, beards and skin at Blispa, Nairobi CBD. Book on WhatsApp.",
+ "kicker": "Camera ready",
+ "h1": "Grooming for Shoots and Creators in",
+ "h1Gold": "Nairobi",
+ "hook": "Does the camera catch every stray hair you missed?",
+ "intro": "Kenyan creators use Blispa before shoots because the camera is unforgiving. Clean lines, even skin and a beard that looks good in 4K.",
+ "imageAlt": "Camera ready haircut at Blispa Nairobi",
+ "serviceName": "Grooming for photo shoots",
+ "priceLow": 700,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Razor cut",
+   "time": "45 min",
+   "price": "KSh 1,200"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Steaming",
+   "time": "30 min",
+   "price": "KSh 1,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Plan around the shoot",
+   "paras": [
+    "Facial two or three days before. Cut and beard the day before. Quick lineup on the day if the shoot is close by."
+   ]
+  },
+  {
+   "h2": "On set grooming",
+   "paras": [
+    "Need a barber on set? Send the location and time on WhatsApp for a quote."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do creators really groom at Blispa?",
+   "a": "Yes. Well known Kenyan creators post from Blispa's chairs."
+  },
+  {
+   "q": "Can a barber come to my shoot?",
+   "a": "Yes. Share the location and time on WhatsApp."
+  },
+  {
+   "q": "What helps skin look good on camera?",
+   "a": "A full facial two or three days before the shoot."
+  }
+ ],
+ "related": [
+  {
+   "href": "/mens-grooming-nairobi/",
+   "label": "Mens grooming"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/home-barber-nairobi/",
+   "label": "Home and office visits"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  }
+ ],
+ "waText": "Hi Blispa, I have a shoot and would like to book grooming."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

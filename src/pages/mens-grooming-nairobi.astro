@@ -1,0 +1,106 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/barber-02.jpg";
+import g0 from "../assets/gallery/fade-01.jpg";
+import g1 from "../assets/gallery/pedicure-01.jpg";
+import g2 from "../assets/gallery/gallery-05.jpg";
+const data = {
+ "title": "Mens Grooming in Nairobi CBD",
+ "description": "Full mens grooming in Nairobi CBD at Blispa. Haircut, beard, facial, pedicure and massage under one roof. 4.9 on Google. Book on WhatsApp.",
+ "kicker": "Everything under one roof",
+ "h1": "Mens Grooming in",
+ "h1Gold": "Nairobi CBD",
+ "hook": "Why visit three places when one floor does it all?",
+ "intro": "Blispa is a barbershop and spa for men who want the full job done well. Cut, beard, skin, hands, feet and a massage, all on the 4th floor of Superior Centre.",
+ "imageAlt": "Mens grooming at Blispa Barbershop Nairobi",
+ "serviceName": "Mens grooming",
+ "priceLow": 700,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Plain haircut",
+   "time": "40 min",
+   "price": "KSh 1,000"
+  },
+  {
+   "name": "Beard razor",
+   "time": "30 min",
+   "price": "KSh 700"
+  },
+  {
+   "name": "Full facial",
+   "time": "30 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  },
+  {
+   "name": "Back massage",
+   "time": "45 min",
+   "price": "KSh 2,000"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Build your own visit",
+   "paras": [
+    "Start with the cut and beard. Add a facial or steam. Finish with a pedicure or massage. Tell Blispa on WhatsApp and the times are lined up."
+   ]
+  },
+  {
+   "h2": "Rated 4.9 on Google",
+   "paras": [
+    "Over 200 Google reviews from CBD professionals, creators and visitors to Nairobi."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What does mens grooming include at Blispa?",
+   "a": "Haircuts, beard work, facials, manicures, pedicures, massage and waxing."
+  },
+  {
+   "q": "How long does a full grooming visit take?",
+   "a": "About two to three hours if you add a facial, pedicure and massage."
+  },
+  {
+   "q": "Do you have packages?",
+   "a": "Yes. See the grooming packages page or ask on WhatsApp."
+  }
+ ],
+ "related": [
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/barbershop-nairobi-cbd/",
+   "label": "Barbershop in Nairobi CBD"
+  },
+  {
+   "href": "/spa-for-men-nairobi/",
+   "label": "Spa for men"
+  },
+  {
+   "href": "/facial-nairobi/",
+   "label": "Facials"
+  },
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a grooming visit."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />

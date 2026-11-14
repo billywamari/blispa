@@ -1,0 +1,92 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import image from "../assets/gallery/pedicure-01.jpg";
+import g0 from "../assets/gallery/gallery-02.jpg";
+import g1 from "../assets/gallery/gallery-08.jpg";
+import g2 from "../assets/gallery/interior-01.jpg";
+const data = {
+ "title": "Pedicure for Men in Nairobi",
+ "description": "Pedicures for men at Blispa, Nairobi CBD. Full pedicure KSh 2,500, nail cut KSh 400. Clean, private and no judgement. Book on WhatsApp.",
+ "kicker": "Feet matter too",
+ "h1": "Pedicures for Men in",
+ "h1Gold": "Nairobi",
+ "hook": "Would you be happy to take your shoes off in front of anyone right now?",
+ "intro": "Men walk, stand and wear closed shoes all day. A Blispa pedicure softens hard skin, tidies nails and leaves your feet ready for sandals.",
+ "imageAlt": "Pedicure station at Blispa Nairobi",
+ "serviceName": "Pedicure for men",
+ "priceLow": 400,
+ "priceHigh": 2500,
+ "prices": [
+  {
+   "name": "Full pedicure",
+   "time": "60 min",
+   "price": "KSh 2,500"
+  },
+  {
+   "name": "Pedicure",
+   "time": "60 min",
+   "price": "KSh 2,000"
+  },
+  {
+   "name": "Nail cut",
+   "time": "15 min",
+   "price": "KSh 400"
+  },
+  {
+   "name": "Full manicure",
+   "time": "40 min",
+   "price": "KSh 1,500"
+  }
+ ],
+ "priceNote": "Prices can change. Send a WhatsApp message and we confirm your exact price before you come in.",
+ "blocks": [
+  {
+   "h2": "Plenty of men already do it",
+   "paras": [
+    "Many Blispa clients add a pedicure to their haircut. It happens on the same floor, in a calm space, with clean tools."
+   ]
+  },
+  {
+   "h2": "Go for the full pedicure",
+   "paras": [
+    "The full pedicure takes an hour and covers soaking, hard skin, nails and a foot massage."
+   ]
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is a pedicure for men at Blispa?",
+   "a": "A full pedicure is KSh 2,500. A nail cut is KSh 400."
+  },
+  {
+   "q": "Are the tools clean?",
+   "a": "Yes. Tools are cleaned between every client."
+  },
+  {
+   "q": "Can I get a manicure too?",
+   "a": "Yes. A full manicure is KSh 1,500."
+  }
+ ],
+ "related": [
+  {
+   "href": "/pedicure-manicure-nairobi-cbd/",
+   "label": "Pedicure and manicure"
+  },
+  {
+   "href": "/manicure-nairobi-cbd/",
+   "label": "Manicure"
+  },
+  {
+   "href": "/grooming-packages-nairobi/",
+   "label": "Grooming packages"
+  },
+  {
+   "href": "/spa-nairobi-cbd/",
+   "label": "Spa in Nairobi CBD"
+  }
+ ],
+ "waText": "Hi Blispa, I would like to book a pedicure."
+};
+---
+
+<ServicePage {...data} image={image} gallery={[g0, g1, g2]} />
